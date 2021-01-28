@@ -1,0 +1,72 @@
+/* ESTILOS GENERALES */
+
+:root {
+  --font-roboto: "Roboto", sans-serif;
+  --font-gotic: "Didact Gothic", sans-serif;
+  --color-grey: #757575;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-roboto);
+  font-size: 10px;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+header ul {
+  display: inline-block;
+  /* width: 50%; */
+  display: flex;
+  flex-direction: row;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+/* HERO */
+
+main .hero {
+  width: 70%;
+  margin: 0 auto;
+}
+
+main .hero h2 {
+  text-align: center;
+  font-family: var(--font-gotic);
+  font-size: 2.4rem;
+  margin-top: 50px;
+}
+
+main .hero p {
+  color: var(--color-grey);
+  font-size: 1.2rem;
+  text-align: center;
+}
