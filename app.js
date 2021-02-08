@@ -52,6 +52,7 @@ function mostrarProyectos() {
       <a
         class="card-button"
         href="${url}"
+        target="_blank"
         >VER DEMO</a
       >
       <a class="card-button">VER GITHUB</a>
