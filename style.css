@@ -9,7 +9,7 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -19,37 +19,42 @@ html {
   background-color: var(--color-fondo);
 }
 
-.titulo {
-  text-align: center;
-  font-family: var(--font-gotic);
-  font-size: 2.8rem;
-  margin-top: 50px;
-}
 /* HEADER */
 
 header {
+  background-image: url("./assets/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 8px 8px 8px rgba(89, 73, 30, 0.3);
+}
+
+header .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 15px;
+  padding: 30px;
+  width: 100%;
+  background-color: var(--color-fondo);
+}
+
+header .nav .logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.5rem;
+}
+
+header .menu {
+  display: flex;
   align-items: center;
 }
 
-header .logo a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.4rem;
-}
-
 header ul {
-  display: inline-block;
-  /* width: 50%; */
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-header ul li {
   list-style: none;
 }
 
@@ -62,66 +67,60 @@ header ul li a {
 
 /* HERO */
 
-main .hero {
-  width: 70%;
+main {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-main .hero p {
-  color: var(--color-grey);
-  font-size: 1.4rem;
-  text-align: center;
-}
-
-/* TECNOLOGIES */
-
-.tecnologies h2 {
-  text-align: center;
-  font-family: var(--font-gotic);
-  font-size: 2.8rem;
-  margin-top: 50px;
-}
-
-.tecnologies .slider {
+.hero {
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
   align-items: center;
-  /*   overflow-x: scroll;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity; */
-  width: 100%;
+  height: 400px;
+  text-align: center;
+  width: 100% !important;
+  padding: 30px;
 }
 
-.tecnologies ul {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 0 auto;
-  flex-wrap: nowrap;
-  margin-top: 40px;
+.hero h1,
+.titulo {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.tecnologies .slider ul li {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0 10px;
-  list-style: none;
+.hero p {
+  color: white;
   font-size: 1.6rem;
-}
-
-.tecnologies .slider ul li i {
-  margin-left: 5px;
+  text-align: center;
 }
 
 /* PROJECTS */
+.projects {
+  margin: 70px;
+}
+
+.projects .titulo {
+  margin-bottom: 70px;
+  color: black;
+}
+
+.projects .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 .projects .projects-container .card {
-  width: 90%;
-  max-width: 350px;
+  width: 400px;
   height: 100%;
   background-color: white;
-  margin: 15px auto;
+  margin: 15px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
   overflow: hidden;
