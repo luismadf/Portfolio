@@ -32,24 +32,88 @@
       <div class="overlay">
         <div class="hero">
           <div class="container">
-            <h1 class="titulo">Hola, Soy Luis De Freites.</h1>
-            <p>
-              Soy un desarrollador web en Madrid, España.Trabajo con React y Vue
-              mayormente, pero puedes encontrar mas sobre mis conocimientos
-              <a href="#">aqui</a>, soy apasionado por la tecnologia, la
-              robotica y la programacion.
-            </p>
+            <div class="img">
+              <img src="./assets/luis1.png" alt="" />
+            </div>
+            <div class="text">
+              <h1 class="titulo">HOLA, <span>SOY LUIS DE FREITES.</span></h1>
+              <p class="text-p">
+                Front-end Developer en Madrid, España. Trabajo con React y Vue
+                mayormente, pero puedes encontrar mas sobre mis conocimientos
+                <a href="#">aqui</a>, soy apasionado por la tecnologia, la
+                robotica y la programacion.
+              </p>
+              <div class="buttons">
+                <a href="#">DESCARGAR CV</a>
+                <a href="#">VER PROYECTOS</a>
+              </div>
+            </div>
+          </div>
+          <div class="arrow">
+            <p>VER <span>PROYECTOS</span></p>
+            <svg
+              className="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <div class="projects">
-        <div class="container">
-          <h2 class="titulo">Proyectos.</h2>
-          <div class="projects-container"></div>
+      <section class="projects">
+        <h2 class="titulo">PROYECTOS.</h2>
+        <div class="project">
+          <div class="img">
+            <img src="./assets/p1.png" alt="" />
+          </div>
+          <div class="text">
+            <h2 class="titulo-card">BATATABIT</h2>
+            <p>
+              Batatabit es un sitio web estatico creado para practicar diseño
+              mobile first.
+            </p>
+            <p class="tech">HTML - CSS</p>
+          </div>
         </div>
-      </div>
+        <div class="project">
+          <div class="text-right">
+            <h2 class="titulo-card">LUIS EXCHANGE</h2>
+            <p>
+              Luis Exchange es un sitio web creado con Vue.js que utiliza que
+              obtiene datos de una API y utiliza filtros para mostrar el valor
+              de las principales monedas virtuales.
+            </p>
+            <p class="tech">HTML - CSS - VUE.JS</p>
+          </div>
+          <div class="img">
+            <img src="./assets/p2.png" alt="" />
+          </div>
+        </div>
+        <div class="project">
+          <div class="img">
+            <img src="./assets/p3.png" alt="" />
+          </div>
+          <div class="text">
+            <h2 class="titulo-card">BRAND</h2>
+            <p>
+              BRAND es un sitio we creado con React.js y React Router, es
+              totalmente dinamico, todo se genera mediantes componentes.
+            </p>
+            <p class="tech">HTML - CSS - REACT</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Contactame</h3>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>
