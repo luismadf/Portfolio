@@ -242,3 +242,20 @@ main {
   font-weight: bold;
   color: #757575;
 }
+
+.p-buttons a {
+  display: inline-block;
+  width: 40%;
+  margin: 40px 0;
+  margin-right: 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-family: var(--font-roboto);
+  font-weight: bold;
+  background-color: var(--color-fondo2);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+}
