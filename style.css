@@ -19,6 +19,7 @@ html {
   font-family: var(--font-roboto);
   font-size: 10px;
   background-color: var(--color-fondo);
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
