@@ -1,92 +1,47 @@
-.container {
-  /*   width: 90%;
-  height: 600px;
-  max-width: 1000px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.hero {
-  align-items: center;
-  flex-direction: column;
-  height: 800px;
-  text-align: center;
-  width: 100% !important;
-  padding-bottom: 20px;
-}
-
-.hero .container .text {
-  width: 100%;
+header .container {
   height: 100%;
-  margin-top: 100px;
 }
 
-.hero .container .text .buttons {
-  flex-direction: column;
-  width: 100%;
+header nav {
+  position: relative;
 }
 
-.hero .container .text .buttons a {
-  width: 100%;
-  margin: 15px 0;
+header nav ul {
+  display: none;
 }
 
-header ul {
-  flex-direction: column;
+header .hero {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "img"
+    "text";
+  height: 80%;
 }
 
-.project {
-  width: 100%;
-  flex-direction: column;
-  padding: 10px;
-  margin: 0;
-}
-
-.project .img {
-  text-align: center;
-  width: 100%;
-}
-
-.project .text {
-  text-align: center;
-  width: 100%;
-}
-
-.project .text-right {
-  text-align: center;
-  width: 100%;
-}
-
-.project .text-right p {
+header .hero .text {
   text-align: center;
 }
 
-.project .text h2 {
-  width: 100%;
+header .hero .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.project .text p {
-  width: 100%;
+header .hero .img img {
+  width: 60%;
+  float: none;
 }
 
-.hero .container .img img {
-  width: 100%;
+header .hero .text .sub-p a {
+  justify-content: center;
 }
 
-.project .text-right h2 {
-  width: 100%;
+.projects .title {
   text-align: center;
 }
 
-.project .text-right p {
-  width: 100%;
-  text-align: center;
-}
-
-.project .text-right {
-  text-align: center;
-  width: 100%;
-  padding: 0;
+.projects-container {
+  grid-template-columns: 1fr;
 }
