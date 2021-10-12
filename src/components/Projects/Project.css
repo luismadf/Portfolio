@@ -1,0 +1,19 @@
+.project img {
+  height: 300px;
+}
+
+.project__title {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.project__description {
+  margin-bottom: 24px;
+}
+
+.project__button {
+  font-size: 16px;
+  border: 0;
+  background-color: transparent;
+  font-family: "Commissioner", sans-serif;
+}

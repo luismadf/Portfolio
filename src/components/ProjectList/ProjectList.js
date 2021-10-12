@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Project from "./Project";
+import Project from "../Projects/Project";
 import Batatabit from "../../images/Cover.png";
 import BatatabitLaptop from "../../images/p4.jpg";
 import Crowfund from "../../images/Crowfund.png";
@@ -16,19 +16,7 @@ import MERNTaskLaptop from "../../images/p8.jpg";
 import Digitalproduct from "../../images/Digitalproduct.png";
 import DigitalproductLaptop from "../../images/p9.jpg";
 
-const Parent = styled.div`
-  width: 100%;
-`;
-
-const List = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-
-  @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
-  }
-`;
+import "./ProjectList.css";
 
 const pList = [
   {
@@ -84,13 +72,11 @@ const pList = [
 
 const ProjectList = () => {
   return (
-    <Parent>
-      <List>
-        {pList.map((project) => (
-          <Project project={project} />
-        ))}
-      </List>
-    </Parent>
+    <div className="projectList">
+      {pList.map((project) => (
+        <Project project={project} />
+      ))}
+    </div>
   );
 };
 
