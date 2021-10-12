@@ -16,8 +16,14 @@ const Project = ({ project }) => {
 
   return (
     <div className="project">
-      <img src={image || Image} alt="Project Cover" />
-      <h3 className="project__title">{name || "Project Name"}</h3>
+      <img
+        src={image || Image}
+        alt="Project Cover"
+        onClick={() => showModal()}
+      />
+      <h3 className="project__title" onClick={() => showModal()}>
+        {name || "Project Name"}
+      </h3>
       <p className="project__description">
         {description ||
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristiqfacilisis fringilla."}

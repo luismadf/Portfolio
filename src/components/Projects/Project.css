@@ -1,5 +1,9 @@
 .project img {
   height: 300px;
+  margin-bottom: 24px;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
 }
 
 .project__title {
@@ -12,8 +16,16 @@
 }
 
 .project__button {
+  cursor: pointer;
   font-size: 16px;
   border: 0;
   background-color: transparent;
   font-family: "Commissioner", sans-serif;
+  transition: 0.4s;
+}
+
+/***** HOVER STATES *****/
+
+.project:hover .project__button {
+  text-decoration: underline;
 }
