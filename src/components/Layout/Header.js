@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useDispatch } from "react-redux";
+import { toggleModal } from "../../actions/generalActions";
 import Hero from "../Hero";
+import CV from "../../images/luisdefreitescv.pdf";
 
 const MainNav = styled.nav`
-  /* background-color: #4398f1; */
-  /*   position: absolute;
-  left: 0;
-  right: 0;
-  height: 10%; */
   display: flex;
   align-items: center;
   height: 72px;
@@ -20,6 +18,10 @@ const MainNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
   }
 
   .logo {
@@ -28,6 +30,10 @@ const MainNav = styled.nav`
     span {
       font-weight: 700;
     }
+    @media (max-width: 1000px) {
+      font-size: 30px;
+      margin: 30px 0 20px 0;
+    }
   }
 
   ul {
@@ -35,6 +41,24 @@ const MainNav = styled.nav`
     align-items: center;
     color: black;
     font-weight: 500;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+
+  ul li {
+    @media (max-width: 1000px) {
+      margin: 10px 0;
+      margin-left: 0;
+    }
+  }
+
+  ul li a {
+    color: black;
+    @media (max-width: 1000px) {
+      margin-left: 0;
+    }
   }
 
   ul li .button {
@@ -49,9 +73,33 @@ const MainNav = styled.nav`
     font-size: 14px;
     font-weight: 500;
   }
+
+  @media (max-width: 1000px) {
+    height: auto;
+  }
 `;
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const contactInfo = {
+    name: "Contact me",
+    description:
+      "Muchisimas gracias por visitar mi portafolio, si te ha gustado y deseas contactar conmigo, puedes hacerlo a través de mi redes sociales. ",
+    contact: true,
+  };
+
+  const aboutInfo = {
+    name: "About me",
+    description:
+      "Muchisimas gracias por visitar mi portafolio, actualmente seguimos trabajando en esta sección! ",
+    contact: true,
+  };
+
+  const showModal = (info) => {
+    dispatch(toggleModal(info));
+  };
+
   return (
     <header>
       <MainNav>
@@ -60,17 +108,21 @@ const Header = () => {
             luisma<span>.dev</span>
           </div>
           <ul>
-            <li>
-              <a href="#">About me</a>
-            </li>
+            {/* <li>
+              <a href="#" onClick={() => showModal(aboutInfo)}>
+                About me
+              </a>
+            </li> */}
             <li>
               <a href="#projects">Portfolio</a>
             </li>
             <li>
-              <a href="#">Contact me</a>
+              <a href="#" onClick={() => showModal(contactInfo)}>
+                Contact me
+              </a>
             </li>
             <li>
-              <a href="#" className="button">
+              <a href={CV} className="button">
                 Download CV
               </a>
             </li>

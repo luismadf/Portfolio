@@ -29,6 +29,10 @@ const ProjectContainer = styled.div`
     width: 100%;
     text-align: left;
     margin: 20px 0;
+
+    @media (max-width: 1000px) {
+      text-align: center;
+    }
   }
 `;
 
@@ -37,6 +41,7 @@ const Description = styled.div`
   grid-template-columns: 78% 22%;
   align-items: center;
   width: 100%;
+  margin-top: 20px;
 
   button {
     width: 112px;
@@ -50,6 +55,15 @@ const Description = styled.div`
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -60,20 +74,21 @@ const Project = ({ project }) => {
 
   const showModal = () => {
     dispatch(toggleModal(project));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <ProjectContainer>
       <img src={image || Image} alt="Project Cover" />
-      <h3>{name || "Project Name"}</h3>
       <Description>
-        <p>
+        <h3>{name || "Project Name"}</h3>
+        {/*         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           tristique sodales magna, eget imperdiet enim lacinia aliquam. In
           facilisis fringilla.
-        </p>
+        </p> */}
         <button type="button" onClick={() => showModal()}>
-          Saber más
+          Learn more
         </button>
       </Description>
     </ProjectContainer>

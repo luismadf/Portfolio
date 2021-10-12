@@ -16,6 +16,10 @@ const MainNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
   }
 
   .logo {
@@ -62,9 +66,9 @@ const Header = () => {
             luisma<span>.dev</span>
           </div>
           <ul>
-            <li>
+            {/* <li>
               <a href="#">About me</a>
-            </li>
+            </li> */}
             <li>
               <a href="#projects">Portfolio</a>
             </li>

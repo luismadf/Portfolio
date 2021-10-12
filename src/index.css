@@ -14,6 +14,7 @@ html {
 
 body {
   position: relative;
+  background-color: #f2f2f2;
 }
 
 .container {
@@ -30,12 +31,23 @@ body {
   bottom: 0;
   left: 0;
 }
+
+#projects {
+  padding-top: 50px;
+}
 /* GENERAL */
 
 /* HEADER */
 
 header {
   height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(255, 255, 255, 1) 34%
+  );
 }
 
 header .container {
@@ -166,25 +178,7 @@ header .hero .img img {
 
 .project-2 img {
   width: 100%;
-  /* height: 100%; */
 }
-
-/* 
-.one {
-  background-image: url("./assets/1.png") !important;
-}
-
-.two {
-  background-image: url("./assets/2.png") !important;
-}
-
-.three {
-  background-image: url("./assets/3.png") !important;
-}
-
-.four {
-  background-image: url("./assets/4.png") !important;
-} */
 
 .project-overlay {
   display: flex;
@@ -251,17 +245,13 @@ header .hero .img img {
 
 /* PROJECTS */
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
+  header {
+    height: auto;
+  }
+
   header .container {
     height: 100%;
-  }
-
-  header nav {
-    position: relative;
-  }
-
-  header nav ul {
-    display: none;
   }
 
   header .hero {
@@ -277,6 +267,16 @@ header .hero .img img {
     text-align: center;
   }
 
+  header .hero .text .title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  header .hero .text .text-p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
   header .hero .img {
     display: flex;
     justify-content: center;
@@ -284,19 +284,14 @@ header .hero .img img {
   }
 
   header .hero .img img {
+    max-width: 350px;
     width: 60%;
     float: none;
+    margin: 30px 0;
   }
 
   header .hero .text .sub-p a {
     justify-content: center;
-  }
-
-  .projects .title {
-    text-align: center;
-  }
-
-  .projects-container {
-    grid-template-columns: 1fr;
+    margin-bottom: 50px;
   }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../../actions/generalActions";
+import ContactIcons from "../ContactIcons";
 
 const ModalContainer = styled.div`
   position: absolute;
@@ -13,7 +14,6 @@ const ModalContainer = styled.div`
   background-color: white;
   width: 95%;
   max-width: 800px;
-  height: 800px;
   border-radius: 10px;
 
   .container_modal {
@@ -33,12 +33,62 @@ const ModalContainer = styled.div`
 
     h2 {
       font-size: 35px;
+      margin-bottom: 50px;
+
+      @media (max-width: 1000px) {
+        text-align: center;
+      }
     }
 
     img {
       width: 100%;
-      margin: 50px 0;
+      margin: 0px 0 50px 0;
     }
+
+    p {
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+`;
+
+const Buttons = styled.div`
+  margin-bottom: 50px;
+
+  .button {
+    display: inline-block;
+    height: 40px;
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-family: "Commissioner", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 20px;
+    text-decoration: none;
+
+    @media (max-width: 1000px) {
+      display: block;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .GithubButton {
+    background-color: #333;
+  }
+
+  .NormalButton {
+    background-color: #4398f1;
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 30px;
   }
 `;
 
@@ -47,7 +97,15 @@ const Modal = () => {
 
   const modalInfo = useSelector((state) => state.general.modalInfo);
 
-  const { name, image, laptopImage } = modalInfo;
+  const {
+    name,
+    image,
+    laptopImage,
+    description,
+    contact,
+    github,
+    live,
+  } = modalInfo;
 
   const showModal = () => {
     dispatch(toggleModal());
@@ -60,12 +118,32 @@ const Modal = () => {
           <i class="fas fa-times" onClick={() => showModal()}></i>
         </div>
         <h2>Welcome to {name}!</h2>
-        <img src={laptopImage} alt="" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          tristique sodales magna, eget imperdiet enim lacinia aliquam. In
-          facilisis fringilla.
-        </p>
+
+        {laptopImage ? <img src={laptopImage} alt="" /> : null}
+
+        {contact ? null : (
+          <Buttons>
+            <a
+              className="button GithubButton"
+              href={github}
+              rel="noreferrer"
+              target="_blank"
+            >
+              See on Github <i class="fab fa-github"></i>
+            </a>
+            <a
+              className="button NormalButton"
+              href={live}
+              rel="noreferrer"
+              target="_blank"
+            >
+              See Online <i class="fas fa-globe-americas"></i>
+            </a>
+          </Buttons>
+        )}
+
+        {description ? <p>{description}</p> : null}
+        {contact ? <ContactIcons /> : null}
       </div>
     </ModalContainer>
   );
