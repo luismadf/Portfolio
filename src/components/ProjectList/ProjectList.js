@@ -26,6 +26,7 @@ const pList = [
     laptopImage: BatatabitLaptop,
     github: "https://github.com/luismadf/Batatabit",
     live: "https://luismadf.github.io/Batatabit/",
+    buttonColor: "orange",
   },
   {
     name: "Crowdfund",
@@ -33,6 +34,7 @@ const pList = [
     laptopImage: CrowfundLaptop,
     github: "https://github.com/luismadf/Crowdfund",
     live: "https://luismadf.github.io/Crowdfund/",
+    buttonColor: "blue",
   },
   {
     name: "Loopstudio",
@@ -40,6 +42,7 @@ const pList = [
     laptopImage: LoopstudioLaptop,
     github: "https://github.com/luismadf/Loopstudio",
     live: "https://luismadf.github.io/Loopstudio/",
+    buttonColor: "pink",
   },
   {
     name: "Sunnyside Agency",
@@ -47,6 +50,7 @@ const pList = [
     laptopImage: LoopstudioLaptop,
     github: "https://github.com/luismadf/SunnysideAgency",
     live: "https://sunnysideagencyproject.netlify.app/",
+    buttonColor: "red",
   },
   {
     name: "Luis Exchange",

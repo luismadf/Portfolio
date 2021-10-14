@@ -5,7 +5,7 @@ import Image from "../../images/Cover.png";
 import "./Project.css";
 
 const Project = ({ project }) => {
-  const { name, image, description } = project;
+  const { name, image, description, buttonColor } = project;
 
   const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ const Project = ({ project }) => {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristiqfacilisis fringilla."}
       </p>
       <button
-        className="project__button"
+        className={`project__button button__underline--${buttonColor}`}
         type="button"
         onClick={() => showModal()}
       >
