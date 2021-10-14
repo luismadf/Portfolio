@@ -1,18 +1,20 @@
 .project img {
-  height: 300px;
+  height: 250px;
   margin-bottom: 24px;
   object-fit: cover;
   object-position: top;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
 .project__title {
   font-size: 32px;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 
 .project__description {
   margin-bottom: 24px;
+  max-width: 400px;
 }
 
 .project__button {
@@ -24,8 +26,22 @@
   transition: 0.4s;
 }
 
-/***** HOVER STATES *****/
+/***** MOBILE *****/
 
-.project:hover .project__button {
-  text-decoration: underline;
+@media (min-width: 1024px) {
+  .project img {
+    height: 300px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  /***** HOVER STATES *****/
+
+  .project:hover .project__button {
+    text-decoration: underline;
+  }
+
+  .project:hover img {
+    transform: scale(1.02);
+  }
 }

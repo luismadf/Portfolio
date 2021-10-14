@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Project from "../Projects/Project";
-import Batatabit from "../../images/Cover.png";
-import BatatabitLaptop from "../../images/p4.jpg";
-import Crowfund from "../../images/Crowfund.png";
+import Batatabit from "../../images/batatabit_home.png";
+import BatatabitLaptop from "../../images/batatabit_screen2.png";
+import Crowfund from "../../images/crowfund_home.png";
 import CrowfundLaptop from "../../images/p5.png";
-import Loopstudio from "../../images/Loopstudio.png";
+import Loopstudio from "../../images/loopstudio_home.png";
 import LoopstudioLaptop from "../../images/p6.png";
+import Sunnyside from "../../images/sunnyside_home.png";
 import Luisexchange from "../../images/Luisexchange.png";
 import LuisexchangeLaptop from "../../images/p7.jpg";
 import Bienesraices from "../../images/Bienesraices.png";
@@ -39,6 +40,13 @@ const pList = [
     laptopImage: LoopstudioLaptop,
     github: "https://github.com/luismadf/Loopstudio",
     live: "https://luismadf.github.io/Loopstudio/",
+  },
+  {
+    name: "Sunnyside Agency",
+    image: Sunnyside,
+    laptopImage: LoopstudioLaptop,
+    github: "https://github.com/luismadf/SunnysideAgency",
+    live: "https://sunnysideagencyproject.netlify.app/",
   },
   {
     name: "Luis Exchange",
