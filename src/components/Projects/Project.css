@@ -1,0 +1,129 @@
+.project img {
+  height: 250px;
+  margin-bottom: 24px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+}
+
+.project__title {
+  font-size: 32px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.project__description {
+  margin-bottom: 24px;
+  max-width: 400px;
+}
+
+.project__button {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 0;
+  background-color: transparent;
+  font-family: "Commissioner", sans-serif;
+  transition: 0.4s;
+}
+
+.project__button i {
+  margin-left: 5px;
+  transition: 0.5;
+}
+
+.button__underline--red::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  width: 86%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: rgb(247, 163, 163);
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.button__underline--orange::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  width: 86%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: rgb(250, 225, 187);
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.button__underline--blue::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  width: 86%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: rgb(208, 236, 252);
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.button__underline--pink::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  width: 86%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: rgb(255, 213, 246);
+  z-index: -1;
+  transition: 0.4s;
+}
+
+/***** MOBILE *****/
+
+@media (min-width: 1024px) {
+  .project img {
+    height: 300px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .button__underline--red::after {
+    width: 0%;
+  }
+
+  .button__underline--orange::after {
+    width: 0%;
+  }
+
+  .button__underline--blue::after {
+    width: 0%;
+  }
+
+  .button__underline--pink::after {
+    width: 0%;
+  }
+
+  /***** HOVER STATES *****/
+
+  .project:hover img {
+    transform: scale(1.02);
+  }
+
+  .project:hover .button__underline--red::after,
+  .project:hover .button__underline--orange::after,
+  .project:hover .button__underline--blue::after,
+  .project:hover .button__underline--pink::after {
+    width: 86%;
+  }
+
+  .project:hover .project__button i {
+    margin-left: 8px;
+  }
+}

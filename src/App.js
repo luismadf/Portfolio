@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Provider } from "react-redux";
 import store from "./store";
 import Layout from "./components/Layout/Layout";
-import ProjectList from "./components/Projects/ProjectList";
+import ProjectList from "./components/ProjectList/ProjectList";
 
 const ProjectTitle = styled.h3`
   font-size: 50px;
