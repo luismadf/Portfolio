@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useDispatch } from "react-redux";
-import { toggleModal } from "../../actions/generalActions";
 import Hero from "../Hero";
 import CV from "../../images/luisdefreitescv.pdf";
 import { contactInfo } from "../../utils/contactInfo";
+import { Modal } from "../";
+import { useModal } from "../../hooks/useModal";
 
 const MainNav = styled.nav`
   display: flex;
@@ -82,13 +82,11 @@ const MainNav = styled.nav`
 
 const Header = () => {
   const { contactMeInfo } = contactInfo;
-  const dispatch = useDispatch();
-  const showModal = (info) => {
-    dispatch(toggleModal(info));
-  };
+  const [modalInfo, handleOnClickModal] = useModal();
 
   return (
     <header>
+      <Modal modalInfo={modalInfo} handleOnClosed={handleOnClickModal} />
       <MainNav>
         <div class="container1">
           <div class="logo">
@@ -104,7 +102,7 @@ const Header = () => {
               <a href="#projects">Portfolio</a>
             </li>
             <li>
-              <a href="#" onClick={() => showModal(contactMeInfo)}>
+              <a href="#" onClick={() => handleOnClickModal(contactMeInfo)}>
                 Contact me
               </a>
             </li>
