@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { toggleModal } from "../../actions/generalActions";
 import Hero from "../Hero";
 import CV from "../../images/luisdefreitescv.pdf";
+import { contactInfo } from "../../utils/contactInfo";
 
 const MainNav = styled.nav`
   display: flex;
@@ -80,22 +81,8 @@ const MainNav = styled.nav`
 `;
 
 const Header = () => {
+  const { contactMeInfo } = contactInfo;
   const dispatch = useDispatch();
-
-  const contactInfo = {
-    name: "Contact me",
-    description:
-      "Muchisimas gracias por visitar mi portafolio, si te ha gustado y deseas contactar conmigo, puedes hacerlo a través de mi redes sociales. ",
-    contact: true,
-  };
-
-  const aboutInfo = {
-    name: "About me",
-    description:
-      "Muchisimas gracias por visitar mi portafolio, actualmente seguimos trabajando en esta sección! ",
-    contact: true,
-  };
-
   const showModal = (info) => {
     dispatch(toggleModal(info));
   };
@@ -117,7 +104,7 @@ const Header = () => {
               <a href="#projects">Portfolio</a>
             </li>
             <li>
-              <a href="#" onClick={() => showModal(contactInfo)}>
+              <a href="#" onClick={() => showModal(contactMeInfo)}>
                 Contact me
               </a>
             </li>
