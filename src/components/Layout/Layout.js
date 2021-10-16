@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Header from "./Header";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Modal from "./Modal";
 
 const Layout = (props) => {
