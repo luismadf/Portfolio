@@ -97,6 +97,12 @@ header ul li a:visited {
     font-weight: 500;
     font-family: "Commissioner", sans-serif;
     transition: 0.4s;
+    box-shadow: 2.8px 2.8px 4.2px rgba(0, 0, 0, 0.02),
+      6.7px 6.7px 10.1px rgba(0, 0, 0, 0.028),
+      12.5px 12.5px 19px rgba(0, 0, 0, 0.035),
+      22.3px 22.3px 34px rgba(0, 0, 0, 0.042),
+      41.8px 41.8px 63.5px rgba(0, 0, 0, 0.05),
+      100px 100px 152px rgba(0, 0, 0, 0.07);
   }
 
   .header__button:hover {
