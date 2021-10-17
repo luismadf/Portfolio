@@ -23,5 +23,7 @@ export const useModal = () => {
     });
   };
 
+  console.log(modalStatus);
+
   return [modalInfo, handleOnClickModal];
 };
