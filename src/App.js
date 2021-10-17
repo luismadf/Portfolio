@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout";
 import ProjectList from "./components/ProjectList/ProjectList";
 
 const ProjectTitle = styled.h3`
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 50px;
   font-weight: 400;
 
@@ -15,7 +15,7 @@ const ProjectTitle = styled.h3`
   }
 
   @media (max-width: 1000px) {
-    text-align: center;
+    text-align: left;
     font-size: 35px;
     margin-bottom: 20px;
   }

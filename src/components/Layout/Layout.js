@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import Hero from "../Hero";
+import Hero from "../Hero/Hero";
 
 const Layout = (props) => {
   return (
