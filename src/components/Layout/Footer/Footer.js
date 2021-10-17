@@ -21,9 +21,7 @@ const Footer = () => {
               <a href="#projects">Portfolio</a>
             </li>
             <li>
-              <a onClick={() => handleOnClickModal(contactMeInfo)}>
-                Contact me
-              </a>
+              <a onClick={() => handleOnClickModal(contactMeInfo)}>Contacto</a>
             </li>
           </ul>
         </div>

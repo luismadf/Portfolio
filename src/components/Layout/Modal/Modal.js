@@ -7,46 +7,44 @@ const Modal = ({ modalInfo, handleOnClosed }) => {
   const { name, image, laptopImage, description, contact, github, live } =
     modalInformation;
 
-  console.log(modalInformation);
+  console.log(modalStatus);
 
   return (
-    <div className={`overlay ${modalStatus ? "hide" : ""}`}>
-      <div className="modal">
-        <div className="container">
-          <i
-            class="fas fa-times modal__closeicon"
-            onClick={() => handleOnClosed()}
-          ></i>
-          <h2 className="modal__title">Welcome to {name}!</h2>
+    <div className={`modal ${modalStatus ? "hide" : ""}`}>
+      <div className="modal__wrapper">
+        <i
+          class="fas fa-times modal__closeicon"
+          onClick={() => handleOnClosed()}
+        ></i>
+        <h2 className="modal__title">{name}</h2>
 
-          {laptopImage ? <img src={laptopImage} alt="" /> : null}
+        {laptopImage ? <img src={laptopImage} alt="" /> : null}
 
-          {contact ? null : (
-            <div className="button">
-              <a
-                className="button GithubButton"
-                href={github}
-                rel="noreferrer"
-                target="_blank"
-              >
-                See on Github <i class="fab fa-github"></i>
-              </a>
-              <a
-                className="button NormalButton"
-                href={live}
-                rel="noreferrer"
-                target="_blank"
-              >
-                See Online <i class="fas fa-globe-americas"></i>
-              </a>
-            </div>
-          )}
+        {contact ? null : (
+          <div className="modal__buttons">
+            <a
+              className="modal__button GithubButton"
+              href={github}
+              rel="noreferrer"
+              target="_blank"
+            >
+              See on Github<i class="fab fa-github"></i>
+            </a>
+            <a
+              className="modal__button NormalButton"
+              href={live}
+              rel="noreferrer"
+              target="_blank"
+            >
+              See Online<i class="fas fa-globe-americas"></i>
+            </a>
+          </div>
+        )}
 
-          {description ? (
-            <p className="modal__description">{description}</p>
-          ) : null}
-          {contact ? <ContactIcons /> : null}
-        </div>
+        {description ? (
+          <p className="modal__description">{description}</p>
+        ) : null}
+        {contact ? <ContactIcons /> : null}
       </div>
     </div>
   );
