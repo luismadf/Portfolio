@@ -26,6 +26,11 @@
   background-color: transparent;
   font-family: "Commissioner", sans-serif;
   transition: 0.4s;
+  color: #333;
+}
+
+.project__button:visited {
+  color: #333;
 }
 
 .project__button i {

@@ -47,7 +47,7 @@ img {
   text-align: center;
 }
 
-.button {
+.modal .button {
   display: inline-block;
   height: 40px;
   padding: 10px 15px;

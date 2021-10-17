@@ -9,13 +9,14 @@ footer .container {
   align-items: center;
   padding: 40px 0;
 }
-.logo {
+
+footer .logo {
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 32px;
 }
 
-.logo span {
+footer .logo span {
   font-weight: 700;
 }
 

@@ -17,7 +17,10 @@ const Project = ({ project }) => {
           alt="Project Cover"
           onClick={() => handleOnClickModal(project)}
         />
-        <h3 className="project__title" /* onClick={() => showModal()} */>
+        <h3
+          className="project__title"
+          onClick={() => handleOnClickModal(project)}
+        >
           {name || "Project Name"}
         </h3>
         <p className="project__description">
@@ -27,7 +30,7 @@ const Project = ({ project }) => {
         <button
           className={`project__button button__underline--${buttonColor}`}
           type="button"
-          /* onClick={() => showModal()} */
+          onClick={() => handleOnClickModal(project)}
         >
           Ver proyecto <i class="fas fa-arrow-right"></i>
         </button>
