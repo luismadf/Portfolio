@@ -1,5 +1,5 @@
 import { contactInfo } from "../../../utils/contactInfo";
-import { useModal } from "../../../hooks/useModal";
+import { useModal } from "../../../hooks";
 import { Modal } from "../../";
 
 import "./Footer.css";

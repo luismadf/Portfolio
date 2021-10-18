@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../../images/Cover.png";
 import "./Project.css";
-import { useModal } from "../../hooks/useModal";
+import { useModal } from "../../hooks";
 import { Modal } from "..";
 
 const Project = ({ project }) => {

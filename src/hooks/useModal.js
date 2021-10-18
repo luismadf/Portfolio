@@ -1,10 +1,9 @@
 import { useState } from "react";
 
-export const useModal = () => {
-  const [modalStatus, setModalStatus] = useState(true);
+const useModal = () => {
   const [modalInfo, setModalInfo] = useState({
-    modalStatus: modalStatus,
-    modalInformation: {
+    status: true,
+    info: {
       name: "",
       image: "",
       laptopImage: "",
@@ -15,15 +14,11 @@ export const useModal = () => {
     },
   });
 
-  const handleOnClickModal = (information) => {
-    setModalStatus(!modalStatus);
-    setModalInfo({
-      modalStatus: modalStatus,
-      modalInformation: information ? information : {},
-    });
+  const handleOnClickModal = (info = {}) => {
+    setModalInfo({ status: !modalInfo?.status, info });
   };
-
-  console.log(modalStatus);
 
   return [modalInfo, handleOnClickModal];
 };
+
+export default useModal
