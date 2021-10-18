@@ -88,6 +88,28 @@
   background-color: #4398f1;
 }
 
-@media (max-width: 1000px) {
-  margin-bottom: 30px;
+.modal__socialMedia {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .modal__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .modal__button {
+    margin-bottom: 0px;
+    min-width: 30%;
+  }
+
+  .NormalButton:hover {
+    filter: brightness(1.2);
+  }
+
+  .GithubButton:hover {
+    filter: brightness(1.4);
+  }
 }

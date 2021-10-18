@@ -26,7 +26,7 @@ const Modal = ({ modalInfo, handleOnClosed }) => {
               rel="noreferrer"
               target="_blank"
             >
-              See on Github<i class="fab fa-github"></i>
+              Github<i class="fab fa-github"></i>
             </a>
             <a
               className="modal__button NormalButton"
@@ -34,7 +34,7 @@ const Modal = ({ modalInfo, handleOnClosed }) => {
               rel="noreferrer"
               target="_blank"
             >
-              See Online<i class="fas fa-globe-americas"></i>
+              Online<i class="fas fa-globe-americas"></i>
             </a>
           </div>
         )}
@@ -42,7 +42,11 @@ const Modal = ({ modalInfo, handleOnClosed }) => {
         {description ? (
           <p className="modal__description">{description}</p>
         ) : null}
-        {contact ? <ContactIcons /> : null}
+        {contact ? (
+          <div className="modal__socialMedia">
+            <ContactIcons />
+          </div>
+        ) : null}
       </div>
     </div>
   );
