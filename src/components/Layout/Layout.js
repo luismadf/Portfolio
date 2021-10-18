@@ -1,9 +1,5 @@
-import React from "react";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
-import Modal from "./Modal/Modal";
-import Hero from "../Hero/Hero";
-import { useModal } from '../../hooks'
+import { Modal, Footer, Header } from "../";
+import { useModal } from "../../hooks";
 
 const Layout = (props) => {
   const [modalInfo, handleOnClickModal] = useModal();
@@ -11,9 +7,8 @@ const Layout = (props) => {
   return (
     <>
       <Header onOpenModal={handleOnClickModal} />
-      <Hero />
       {props.children}
-      <Footer />
+      <Footer onOpenModal={handleOnClickModal} />
       <Modal modalInfo={modalInfo} handleOnClosed={handleOnClickModal} />
     </>
   );

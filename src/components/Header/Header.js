@@ -1,22 +1,21 @@
 import React from "react";
-import CV from "../../../images/luisdefreitescv.pdf";
-import { contactInfo } from "../../../utils/contactInfo";
+import CV from "../../images/luisdefreitescv.pdf";
+import { contactInfo } from "../../utils/contactInfo";
 
 import "./Header.css";
 
 const Header = ({ onOpenModal }) => {
   const { contactMeInfo, aboutInfo } = contactInfo;
 
-
   const handleOnClickAbout = (e) => {
     e.preventDefault();
     onOpenModal(aboutInfo);
-  }
+  };
 
   const handleOnClickContact = (e) => {
     e.preventDefault();
     onOpenModal(contactMeInfo);
-  }
+  };
 
   return (
     <header>

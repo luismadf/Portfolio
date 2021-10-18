@@ -1,4 +1,4 @@
-import ContactIcons from "../../ContactIcons";
+import ContactIcons from "../ContactIcons";
 import "./Modal.css";
 
 const Modal = ({ modalInfo, handleOnClosed }) => {
