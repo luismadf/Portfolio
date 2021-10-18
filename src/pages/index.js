@@ -1,7 +1,5 @@
-import React from "react";
 import styled from "@emotion/styled";
-import Layout from "../components/Layout/Layout";
-import ProjectList from "../components/ProjectList/ProjectList";
+import { Layout, Hero, ProjectList } from "../components";
 import "./index.css";
 
 const ProjectTitle = styled.h3`
@@ -24,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
+        <Hero />
         <main>
           <div class="container" id="projects">
             <ProjectTitle>

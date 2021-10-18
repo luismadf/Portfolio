@@ -1,6 +1,4 @@
-import React from "react";
-import styled from "@emotion/styled";
-import Project from "../Projects/Project";
+import { Project } from "../";
 import { projectList } from "../../utils/projectList";
 
 import "./ProjectList.css";

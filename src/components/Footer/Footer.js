@@ -1,16 +1,17 @@
-import { contactInfo } from "../../../utils/contactInfo";
-import { useModal } from "../../../hooks";
-import { Modal } from "../../";
+import { contactInfo } from "../../utils/contactInfo";
 
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ onOpenModal }) => {
   const { contactMeInfo } = contactInfo;
-  const [modalInfo, handleOnClickModal] = useModal();
+
+  const handleOnClickContact = (e) => {
+    e.preventDefault();
+    onOpenModal(contactMeInfo);
+  };
 
   return (
     <>
-      <Modal modalInfo={modalInfo} handleOnClosed={handleOnClickModal} />
       <footer>
         <div className="container">
           <div class="logo">
@@ -21,7 +22,7 @@ const Footer = () => {
               <a href="#projects">Portfolio</a>
             </li>
             <li>
-              <a onClick={() => handleOnClickModal(contactMeInfo)}>Contacto</a>
+              <a onClick={handleOnClickContact}>Contacto</a>
             </li>
           </ul>
         </div>
