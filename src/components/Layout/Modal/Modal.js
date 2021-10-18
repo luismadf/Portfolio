@@ -2,15 +2,13 @@ import ContactIcons from "../../ContactIcons";
 import "./Modal.css";
 
 const Modal = ({ modalInfo, handleOnClosed }) => {
-  const { modalStatus, modalInformation } = modalInfo;
+  const { status, info } = modalInfo;
+  const { name, image, laptopImage, description, contact, github, live } = info;
 
-  const { name, image, laptopImage, description, contact, github, live } =
-    modalInformation;
-
-  console.log(modalStatus);
+  // console.log(status);
 
   return (
-    <div className={`modal ${modalStatus ? "hide" : ""}`}>
+    <div className={`modal ${status ? "hide" : ""}`}>
       <div className="modal__wrapper">
         <i
           class="fas fa-times modal__closeicon"

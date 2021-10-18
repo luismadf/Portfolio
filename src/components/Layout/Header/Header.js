@@ -1,18 +1,25 @@
 import React from "react";
 import CV from "../../../images/luisdefreitescv.pdf";
 import { contactInfo } from "../../../utils/contactInfo";
-import { Modal } from "../..";
-import { useModal } from "../../../hooks/useModal";
 
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ onOpenModal }) => {
   const { contactMeInfo, aboutInfo } = contactInfo;
-  const [modalInfo, handleOnClickModal] = useModal();
+
+
+  const handleOnClickAbout = (e) => {
+    e.preventDefault();
+    onOpenModal(aboutInfo);
+  }
+
+  const handleOnClickContact = (e) => {
+    e.preventDefault();
+    onOpenModal(contactMeInfo);
+  }
 
   return (
     <header>
-      <Modal modalInfo={modalInfo} handleOnClosed={handleOnClickModal} />
       <div className="container">
         <div class="logo">
           luisma<span>.dev</span>
@@ -20,7 +27,7 @@ const Header = () => {
         <i class="fas fa-bars header__mobileMenu"></i>
         <ul className="menu">
           <li>
-            <a href="#" onClick={() => handleOnClickModal(aboutInfo)}>
+            <a href="#" onClick={handleOnClickAbout}>
               About me
             </a>
           </li>
@@ -28,7 +35,7 @@ const Header = () => {
             <a href="#projects">Portfolio</a>
           </li>
           <li>
-            <a href="#" onClick={() => handleOnClickModal(contactMeInfo)}>
+            <a href="#" onClick={handleOnClickContact}>
               Contact me
             </a>
           </li>
