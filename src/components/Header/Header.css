@@ -1,0 +1,115 @@
+header {
+  background-color: transparent;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+header .menu {
+  display: none;
+}
+
+header .logo {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+header .logo span {
+  font-weight: 700;
+}
+
+.header__mobileMenu {
+  font-size: 25px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  list-style: none;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  width: 105%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #333;
+  transition: 0.4s;
+}
+
+header ul li a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+}
+
+header ul li a:visited {
+  color: #333;
+}
+
+@media (min-width: 1024px) {
+  .header__mobileMenu {
+    display: none;
+  }
+
+  header .menu {
+    display: flex;
+  }
+
+  header ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header ul li {
+    margin-right: 32px;
+  }
+
+  header ul li a::after {
+    width: 0%;
+  }
+
+  header ul li a:hover::after {
+    width: 105%;
+  }
+
+  header ul li:last-of-type {
+    margin-right: 0px;
+  }
+
+  .header__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: #4398f1;
+    color: white !important;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Commissioner", sans-serif;
+    transition: 0.4s;
+    box-shadow: 2.8px 2.8px 4.2px rgba(0, 0, 0, 0.02),
+      6.7px 6.7px 10.1px rgba(0, 0, 0, 0.028),
+      12.5px 12.5px 19px rgba(0, 0, 0, 0.035),
+      22.3px 22.3px 34px rgba(0, 0, 0, 0.042),
+      41.8px 41.8px 63.5px rgba(0, 0, 0, 0.05),
+      100px 100px 152px rgba(0, 0, 0, 0.07);
+  }
+
+  .header__button:hover {
+    transform: scale(1.05);
+  }
+
+  .header__button:hover::after {
+    width: 0%;
+  }
+}

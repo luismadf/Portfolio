@@ -1,42 +1,27 @@
-import React from "react";
-import styled from "@emotion/styled";
-import Project from "./Project";
-import Batatabit from "../../images/Cover.png";
-import BatatabitLaptop from "../../images/p4.jpg";
-import Crowfund from "../../images/Crowfund.png";
-import CrowfundLaptop from "../../images/p5.png";
-import Loopstudio from "../../images/Loopstudio.png";
-import LoopstudioLaptop from "../../images/p6.png";
-import Luisexchange from "../../images/Luisexchange.png";
-import LuisexchangeLaptop from "../../images/p7.jpg";
-import Bienesraices from "../../images/Bienesraices.png";
-import BienesraicesLaptop from "../../images/p10.jpg";
-import MERNTask from "../../images/MERNTask.png";
-import MERNTaskLaptop from "../../images/p8.jpg";
-import Digitalproduct from "../../images/Digitalproduct.png";
-import DigitalproductLaptop from "../../images/p9.jpg";
+import Batatabit from "../images/batatabit_home.png";
+import BatatabitLaptop from "../images/batatabit_screen2.png";
+import Crowfund from "../images/crowfund_home.png";
+import CrowfundLaptop from "../images/p5.png";
+import Loopstudio from "../images/loopstudio_home.png";
+import LoopstudioLaptop from "../images/p6.png";
+import Sunnyside from "../images/sunnyside_home.png";
+import Luisexchange from "../images/Luisexchange.png";
+import LuisexchangeLaptop from "../images/p7.jpg";
+import Bienesraices from "../images/Bienesraices.png";
+import BienesraicesLaptop from "../images/p10.jpg";
+import MERNTask from "../images/MERNTask.png";
+import MERNTaskLaptop from "../images/p8.jpg";
+import Digitalproduct from "../images/Digitalproduct.png";
+import DigitalproductLaptop from "../images/p9.jpg";
 
-const Parent = styled.div`
-  width: 100%;
-`;
-
-const List = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-
-  @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const pList = [
+export const projectList = [
   {
     name: "Batatabit",
     image: Batatabit,
     laptopImage: BatatabitLaptop,
     github: "https://github.com/luismadf/Batatabit",
     live: "https://luismadf.github.io/Batatabit/",
+    buttonColor: "orange",
   },
   {
     name: "Crowdfund",
@@ -44,6 +29,7 @@ const pList = [
     laptopImage: CrowfundLaptop,
     github: "https://github.com/luismadf/Crowdfund",
     live: "https://luismadf.github.io/Crowdfund/",
+    buttonColor: "blue",
   },
   {
     name: "Loopstudio",
@@ -51,8 +37,17 @@ const pList = [
     laptopImage: LoopstudioLaptop,
     github: "https://github.com/luismadf/Loopstudio",
     live: "https://luismadf.github.io/Loopstudio/",
+    buttonColor: "pink",
   },
   {
+    name: "Sunnyside Agency",
+    image: Sunnyside,
+    laptopImage: LoopstudioLaptop,
+    github: "https://github.com/luismadf/SunnysideAgency",
+    live: "https://sunnysideagencyproject.netlify.app/",
+    buttonColor: "red",
+  },
+  /*   {
     name: "Luis Exchange",
     image: Luisexchange,
     laptopImage: LuisexchangeLaptop,
@@ -79,19 +74,5 @@ const pList = [
     laptopImage: DigitalproductLaptop,
     github: "https://github.com/luismadf/Digital_product_react",
     live: "https://digitalproductreact.netlify.app/",
-  },
+  }, */
 ];
-
-const ProjectList = () => {
-  return (
-    <Parent>
-      <List>
-        {pList.map((project) => (
-          <Project project={project} />
-        ))}
-      </List>
-    </Parent>
-  );
-};
-
-export default ProjectList;

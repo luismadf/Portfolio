@@ -1,22 +1,15 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import Header from "./Header";
-import Footer from "./Footer";
-import Modal from "./Modal";
+import { Modal, Footer, Header } from "../";
+import { useModal } from "../../hooks";
 
 const Layout = (props) => {
-  const showModal = useSelector((state) => state.general.modal);
+  const [modalInfo, handleOnClickModal] = useModal();
 
   return (
     <>
-      {showModal ? (
-        <div className="overlay">
-          <Modal />
-        </div>
-      ) : null}
-      <Header />
+      <Header onOpenModal={handleOnClickModal} />
       {props.children}
-      <Footer />
+      <Footer onOpenModal={handleOnClickModal} />
+      <Modal modalInfo={modalInfo} handleOnClosed={handleOnClickModal} />
     </>
   );
 };
