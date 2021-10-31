@@ -21,6 +21,7 @@ const ProjectTitle = styled.h3`
 function App() {
   return (
     <div className="App">
+      <div className="blue-bar"></div>
       <Layout>
         <Hero />
         <main>
