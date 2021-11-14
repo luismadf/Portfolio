@@ -1,10 +1,10 @@
 import React from "react";
 import CV from "../../images/luisdefreitescv.pdf";
-import { contactInfo } from "../../utils/contactInfo";
+import { contactInfo } from "../../utils";
 
 import "./Header.css";
 
-const Header = ({ onOpenModal }) => {
+const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   const { contactMeInfo, aboutInfo } = contactInfo;
 
   const handleOnClickAbout = (e) => {
@@ -17,16 +17,23 @@ const Header = ({ onOpenModal }) => {
     onOpenModal(contactMeInfo);
   };
 
+  const handleOnMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
   return (
     <header>
       <div className="container">
         <div class="logo">
           luisma<span>.dev</span>
         </div>
-        <i class="fas fa-bars header__mobileMenu"></i>
+        <i
+          class="fas fa-bars header__mobileMenu"
+          onClick={() => handleOnMobileMenu()}
+        ></i>
         <ul className="menu">
           <li>
-            <a href="#" onClick={handleOnClickAbout}>
+            <a href="#about" onClick={handleOnClickAbout}>
               About me
             </a>
           </li>
@@ -34,7 +41,7 @@ const Header = ({ onOpenModal }) => {
             <a href="#projects">Portfolio</a>
           </li>
           <li>
-            <a href="#" onClick={handleOnClickContact}>
+            <a href="#contact" onClick={handleOnClickContact}>
               Contact me
             </a>
           </li>

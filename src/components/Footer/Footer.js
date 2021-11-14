@@ -1,4 +1,4 @@
-import { contactInfo } from "../../utils/contactInfo";
+import { contactInfo } from "../../utils";
 
 import "./Footer.css";
 
@@ -22,7 +22,9 @@ const Footer = ({ onOpenModal }) => {
               <a href="#projects">Portfolio</a>
             </li>
             <li>
-              <a onClick={handleOnClickContact}>Contacto</a>
+              <a href="#contact" onClick={handleOnClickContact}>
+                Contacto
+              </a>
             </li>
           </ul>
         </div>
