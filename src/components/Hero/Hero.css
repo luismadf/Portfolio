@@ -61,4 +61,8 @@
   .hero .img img {
     max-width: 300px;
   }
+
+  .hero__look a:hover {
+    color: black;
+  }
 }
