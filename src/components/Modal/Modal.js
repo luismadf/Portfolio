@@ -3,7 +3,7 @@ import "./Modal.css";
 
 const Modal = ({ modalInfo, handleOnClosed }) => {
   const { status, info } = modalInfo;
-  const { name, image, laptopImage, description, contact, github, live } = info;
+  const { name, laptopImage, description, contact, github, live } = info;
 
   // console.log(status);
 

@@ -1,4 +1,4 @@
-export const contactInfo = {
+const contactInfo = {
   contactMeInfo: {
     name: "Contacto",
     description:
@@ -12,3 +12,5 @@ export const contactInfo = {
     contact: true,
   },
 };
+
+export default contactInfo;

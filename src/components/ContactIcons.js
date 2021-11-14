@@ -20,6 +20,7 @@ const ContactIcons = () => {
         <a
           href="https://www.linkedin.com/in/luis-de-freites-6a5888181/"
           target="_blank"
+          rel="noreferrer"
         >
           <i class="fab fa-linkedin"></i>
         </a>
@@ -30,7 +31,7 @@ const ContactIcons = () => {
         </a>
       </li>
       <li>
-        <a href="https://twitter.com/luismadf" target="_blank">
+        <a href="https://twitter.com/luismadf" target="_blank" rel="noreferrer">
           <i class="fab fa-twitter-square"></i>
         </a>
       </li>

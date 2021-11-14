@@ -20,8 +20,8 @@ const Hero = () => {
             </a>
           </p>
         </div>
-        <div class="img">
-          <img src={ImgLuis} alt="Luis picture" />
+        <div className="img">
+          <img src={ImgLuis} alt="Luis" />
         </div>
       </div>
     </div>

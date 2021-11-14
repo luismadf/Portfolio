@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  .mobileMenu__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileMenu__overlay.hide {
+    width: 0%;
+    transition: all 0.4s;
+  }
+
+  .mobileMenu__menu li {
+    list-style: none;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .mobileMenu__menu li a {
+    font-size: 28px;
+    color: white;
+  }
+}
