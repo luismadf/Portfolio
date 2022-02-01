@@ -1,5 +1,7 @@
 import React from "react";
 import CV from "../../images/luisdefreitescv.pdf";
+import { Link } from "react-router-dom";
+
 import { contactInfo } from "../../utils";
 
 import "./Header.css";
@@ -24,9 +26,11 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   return (
     <header>
       <div className="container">
-        <div class="logo">
-          luisma<span>.dev</span>
-        </div>
+        <Link to="/">
+          <div class="logo">
+            luisma<span>.dev</span>
+          </div>
+        </Link>
         <i
           class="fas fa-bars header__mobileMenu"
           onClick={() => handleOnMobileMenu()}

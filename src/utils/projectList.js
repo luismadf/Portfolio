@@ -1,10 +1,19 @@
-import Batatabit from "../images/batatabit_home.png";
-import BatatabitLaptop from "../images/batatabit_screen2.png";
-import Crowfund from "../images/crowfund_home.png";
-import CrowfundLaptop from "../images/p5.png";
-import Loopstudio from "../images/loopstudio_home.png";
-import LoopstudioLaptop from "../images/p6.png";
-import Sunnyside from "../images/sunnyside_home.png";
+import Batatabit from "../images/projects/batatabit/show.png";
+import BatatabitDesktop from "../images/projects/batatabit/desktop.jpg";
+import BatatabitMobile from "../images/projects/batatabit/mobile.png";
+
+import Crowfund from "../images/projects/crowdfund/show.png";
+import CrowfundDesktop from "../images/projects/crowdfund/desktop.jpg";
+import CrowfundMobile from "../images/projects/crowdfund/mobile.png";
+
+import Loopstudio from "../images/projects/loopstudio/show.png";
+import LoopstudioDesktop from "../images/projects/loopstudio/desktop.jpg";
+import LoopstudioMobile from "../images/projects/loopstudio/mobile.png";
+
+import Sunnyside from "../images/projects/sunnyside/show.png";
+import SunnysideDesktop from "../images/projects/sunnyside/desktop.jpg";
+import SunnysideMobile from "../images/projects/sunnyside/mobile.png";
+
 import Luisexchange from "../images/Luisexchange.png";
 import LuisexchangeLaptop from "../images/p7.jpg";
 import Bienesraices from "../images/Bienesraices.png";
@@ -16,36 +25,72 @@ import DigitalproductLaptop from "../images/p9.jpg";
 
 export const projectList = [
   {
+    id: 1,
     name: "Batatabit",
+    info: {
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+    },
     image: Batatabit,
-    laptopImage: BatatabitLaptop,
-    github: "https://github.com/luismadf/Batatabit",
-    live: "https://luismadf.github.io/Batatabit/",
+    desktop: BatatabitDesktop,
+    mobile: BatatabitMobile,
     buttonColor: "orange",
+    stack: ["html", "css", "javascript"],
+    code: "https://github.com/luismadf/Batatabit",
+    live: "https://luismadf.github.io/Batatabit/",
   },
   {
+    id: 2,
     name: "Crowdfund",
+    info: {
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+    },
     image: Crowfund,
-    laptopImage: CrowfundLaptop,
-    github: "https://github.com/luismadf/Crowdfund",
-    live: "https://luismadf.github.io/Crowdfund/",
+    desktop: CrowfundDesktop,
+    mobile: CrowfundMobile,
     buttonColor: "blue",
+    stack: ["html", "css", "javascript"],
+    code: "https://github.com/luismadf/Crowdfund",
+    live: "https://luismadf.github.io/Crowdfund/",
   },
   {
+    id: 3,
     name: "Loopstudio",
+    info: {
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+    },
     image: Loopstudio,
-    laptopImage: LoopstudioLaptop,
-    github: "https://github.com/luismadf/Loopstudio",
-    live: "https://luismadf.github.io/Loopstudio/",
+    desktop: LoopstudioDesktop,
+    mobile: LoopstudioMobile,
     buttonColor: "pink",
+    stack: ["html", "css", "javascript"],
+    code: "https://github.com/luismadf/Loopstudio",
+    live: "https://luismadf.github.io/Loopstudio/",
   },
   {
+    id: 4,
     name: "Sunnyside Agency",
+    info: {
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+    },
     image: Sunnyside,
-    laptopImage: LoopstudioLaptop,
-    github: "https://github.com/luismadf/SunnysideAgency",
-    live: "https://sunnysideagencyproject.netlify.app/",
+    desktop: SunnysideDesktop,
+    mobile: SunnysideMobile,
     buttonColor: "red",
+    stack: ["html", "css", "javascript"],
+    code: "https://github.com/luismadf/SunnysideAgency",
+    live: "https://sunnysideagencyproject.netlify.app/",
   },
   /*   {
     name: "Luis Exchange",
@@ -76,3 +121,7 @@ export const projectList = [
     live: "https://digitalproductreact.netlify.app/",
   }, */
 ];
+
+export const getProjectById = (id) => {
+  return projectList.filter((project) => project.id === parseInt(id));
+};
