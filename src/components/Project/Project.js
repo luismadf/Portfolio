@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Project.css";
 
 const Project = ({ project }) => {
-  const { id, name, image, description, buttonColor } = project;
+  const { id, name, image, info, buttonColor } = project;
   let navigate = useNavigate();
   const handleClick = (id) => {
     navigate(`/project/${id}`);
@@ -23,7 +23,7 @@ const Project = ({ project }) => {
           {name || "Project Name"}
         </h3>
         <p className="project__description">
-          {description ||
+          {info.shortDescription ||
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristiqfacilisis fringilla."}
         </p>
         <button

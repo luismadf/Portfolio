@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Layout, Hero, ProjectList } from "../../components";
+import { Hero, ProjectList } from "../../components";
 import "./index.css";
 
 const ProjectTitle = styled.h3`

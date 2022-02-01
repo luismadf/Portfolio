@@ -6,7 +6,7 @@ import "./project.css";
 
 const Project = () => {
   let { id } = useParams();
-  const [{ name, description, desktop, mobile, stack, code, live }] =
+  const [{ name, info, desktop, mobile, stack, code, live }] =
     getProjectById(id);
   return (
     <>
@@ -14,7 +14,7 @@ const Project = () => {
         <div className="project__intro mb-5">
           <div className="intro__text">
             <h1>{name}</h1>
-            <p className="mb-3">{description}</p>
+            <p className="mb-3">{info.description}</p>
             <div className="intro__characteristics mb-3">
               {stack && (
                 <ul>
