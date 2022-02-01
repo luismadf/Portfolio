@@ -108,4 +108,12 @@ header ul li a:visited {
   .header__button:hover::after {
     width: 0%;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: inherit;
+  }
 }

@@ -1,7 +1,9 @@
 import Batatabit from "../images/batatabit_home.png";
-import BatatabitLaptop from "../images/batatabit_screen2.png";
+import BatatabitDesktop from "../images/projects/batatabit/desktop.jpg";
+import BatatabitMobile from "../images/projects/batatabit/mobile.png";
 import Crowfund from "../images/crowfund_home.png";
-import CrowfundLaptop from "../images/p5.png";
+import CrowfundDesktop from "../images/projects/crowdfund/desktop.jpg";
+import CrowfundMobile from "../images/projects/crowdfund/mobile.png";
 import Loopstudio from "../images/loopstudio_home.png";
 import LoopstudioLaptop from "../images/p6.png";
 import Sunnyside from "../images/sunnyside_home.png";
@@ -16,22 +18,33 @@ import DigitalproductLaptop from "../images/p9.jpg";
 
 export const projectList = [
   {
+    id: 1,
     name: "Batatabit",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
     image: Batatabit,
-    laptopImage: BatatabitLaptop,
-    github: "https://github.com/luismadf/Batatabit",
-    live: "https://luismadf.github.io/Batatabit/",
+    desktop: BatatabitDesktop,
+    mobile: BatatabitMobile,
     buttonColor: "orange",
+    stack: ["html", "css", "javascript"],
+    code: "https://github.com/luismadf/Batatabit",
+    live: "https://luismadf.github.io/Batatabit/",
   },
   {
+    id: 2,
     name: "Crowdfund",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
     image: Crowfund,
-    laptopImage: CrowfundLaptop,
-    github: "https://github.com/luismadf/Crowdfund",
-    live: "https://luismadf.github.io/Crowdfund/",
+    desktop: CrowfundDesktop,
+    mobile: CrowfundMobile,
     buttonColor: "blue",
+    stack: ["html", "css", "javascript"],
+    code: "https://github.com/luismadf/Crowdfund",
+    live: "https://luismadf.github.io/Crowdfund/",
   },
   {
+    id: 3,
     name: "Loopstudio",
     image: Loopstudio,
     laptopImage: LoopstudioLaptop,
@@ -40,6 +53,7 @@ export const projectList = [
     buttonColor: "pink",
   },
   {
+    id: 4,
     name: "Sunnyside Agency",
     image: Sunnyside,
     laptopImage: LoopstudioLaptop,
@@ -76,3 +90,7 @@ export const projectList = [
     live: "https://digitalproductreact.netlify.app/",
   }, */
 ];
+
+export const getProjectById = (id) => {
+  return projectList.filter((project) => project.id === parseInt(id));
+};

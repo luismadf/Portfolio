@@ -1,26 +1,25 @@
 import React from "react";
 import Image from "../../images/Cover.png";
+import { useNavigate } from "react-router-dom";
+
 import "./Project.css";
-import { useModal } from "../../hooks";
-import { Modal } from "..";
 
 const Project = ({ project }) => {
-  const { name, image, description, buttonColor } = project;
-  const [modalInfo, handleOnClickModal] = useModal();
+  const { id, name, image, description, buttonColor } = project;
+  let navigate = useNavigate();
+  const handleClick = (id) => {
+    navigate(`/project/${id}`);
+  };
 
   return (
     <>
-      <Modal modalInfo={modalInfo} handleOnClosed={handleOnClickModal} />
       <div className="project">
         <img
           src={image || Image}
           alt="Project Cover"
-          onClick={() => handleOnClickModal(project)}
+          onClick={() => handleClick(id)}
         />
-        <h3
-          className="project__title"
-          onClick={() => handleOnClickModal(project)}
-        >
+        <h3 className="project__title" onClick={() => handleClick(id)}>
           {name || "Project Name"}
         </h3>
         <p className="project__description">
@@ -30,7 +29,7 @@ const Project = ({ project }) => {
         <button
           className={`project__button button__underline--${buttonColor}`}
           type="button"
-          onClick={() => handleOnClickModal(project)}
+          onClick={() => handleClick(id)}
         >
           Ver proyecto <i class="fas fa-arrow-right"></i>
         </button>
