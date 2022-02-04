@@ -5,7 +5,7 @@ header {
 header .container {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: calc(var(--spacer) * 2.5) 0;
 }
 
 header .menu {
@@ -13,11 +13,18 @@ header .menu {
 }
 
 header .logo {
-  font-size: 25px;
+  text-decoration: none;
+}
+
+header .logo:visited {
+  color: var(--dark);
+}
+
+header .logo h3 {
   font-weight: 400;
 }
 
-header .logo span {
+header .logo h3 span {
   font-weight: 700;
 }
 
@@ -40,18 +47,18 @@ header ul li a::after {
   width: 105%;
   height: 3px;
   border-radius: 15px;
-  background-color: #333;
+  background-color: var(--dark);
   transition: 0.4s;
 }
 
 header ul li a {
   position: relative;
-  color: #333;
+  color: var(--dark);
   text-decoration: none;
 }
 
 header ul li a:visited {
-  color: #333;
+  color: var(--dark);
 }
 
 @media (min-width: 1024px) {
@@ -66,10 +73,7 @@ header ul li a:visited {
   header ul {
     flex-direction: row;
     align-items: center;
-  }
-
-  header ul li {
-    margin-right: 32px;
+    gap: calc(var(--spacer) * 2);
   }
 
   header ul li a::after {
@@ -89,7 +93,7 @@ header ul li a:visited {
     align-items: center;
     justify-content: center;
     padding: 14px 22px;
-    background-color: #4398f1;
+    background-color: var(--primary);
     color: white !important;
     text-transform: uppercase;
     border-radius: 5px;
@@ -101,8 +105,8 @@ header ul li a:visited {
 
   .header__button:hover {
     transform: scale(1.05);
-    -webkit-box-shadow: 2px 12px 16px -4px rgba(0, 0, 0, 0.23);
-    box-shadow: 2px 12px 16px -4px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
   }
 
   .header__button:hover::after {

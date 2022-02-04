@@ -19,7 +19,7 @@
 }
 
 .intro__characteristics li a {
-  color: var(--main-blue);
+  color: var(--primary);
   font-weight: 500;
 }
 

@@ -1,36 +1,46 @@
-import styled from "@emotion/styled";
-import { Hero, ProjectList } from "../../components";
+import ImgLuis from "../../images/luis1.png";
+import { Project } from "../../components";
+import { projectList } from "../../utils/projectList";
+
 import "./index.css";
-
-const ProjectTitle = styled.h3`
-  font-size: 40px;
-  margin-bottom: 50px;
-  font-weight: 400;
-
-  span {
-    font-weight: 700;
-  }
-
-  @media (max-width: 1000px) {
-    text-align: left;
-    font-size: 35px;
-    margin-bottom: 20px;
-  }
-`;
 
 function Home() {
   return (
-    <div className="App">
-      <Hero />
-      <main>
-        <div class="container" id="projects">
-          <ProjectTitle>
-            These are my <span>projects.</span>
-          </ProjectTitle>
-          <ProjectList />
+    <main>
+      <div class="hero mb-6">
+        <div className="container">
+          <div class="hero__text">
+            <h1 class="hero__title">
+              Hola, Soy Luis. <br /> <span>Front End Developer</span> en
+              MyInvestor.
+            </h1>
+            <p class="hero__description">
+              Me encanta solucionar problemas y entregar excelencia.
+            </p>
+            <p class="hero__look">
+              <a href="#projects">
+                Echa un vistazo a mis proyectos
+                <i class="fas fa-arrow-down"></i>
+              </a>
+            </p>
+          </div>
+          <div className="img">
+            <img src={ImgLuis} alt="Luis" />
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+
+      <div class="container mb-6" id="projects">
+        <h2 className="projects__title mb-6">
+          Mis <span>proyectos</span>
+        </h2>
+        <div className="projects__list">
+          {projectList.map((project) => (
+            <Project project={project} />
+          ))}
+        </div>
+      </div>
+    </main>
   );
 }
 
