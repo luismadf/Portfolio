@@ -29,9 +29,9 @@ export const projectList = [
     name: "Batatabit",
     info: {
       shortDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
+        "Batatabit es un servicio que te ayuda a cumplir tus sueños a traves de la criptomonedas, si, como lo leiste, compra y vende con nosotros, no hay tasas escondidas.",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+        "Batatabit es un servicio que te ayuda a cumplir tus sueños a traves de la criptomonedas, si, como lo leiste, compra y vende con nosotros, no hay tasas escondidas, te mostramos las tendencias del mercado para que estes preparados y ademas con nuestra API puedes obtener información y realizar tu ¡AL INSTANTE!",
     },
     image: Batatabit,
     desktop: BatatabitDesktop,

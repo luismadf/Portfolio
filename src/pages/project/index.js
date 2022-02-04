@@ -91,13 +91,7 @@ const Project = () => {
 
         <div className="project__purpose mb-5">
           <h2>Proposito del Projecto</h2>
-          <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed
-            fringilla purus. Cras at elit urna. Quisque quis neque iaculis,
-            aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis
-            venenatis orci malesuada non. Aliquam felis justo, suscipit et
-            mauris non, tempus placerat nulla.
-          </p>
+          <p className="">Muy pronto</p>
         </div>
 
         <div className="project__planning mb-5">
@@ -108,33 +102,15 @@ const Project = () => {
           <div className="plannig__text">
             <div className="project__stack mb-3">
               <h2>Explicación del Stack</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                sed fringilla purus. Cras at elit urna. Quisque quis neque
-                iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi
-                turpis, quis venenatis orci malesuada non. Aliquam felis justo,
-                suscipit et mauris non, tempus placerat nulla.
-              </p>
+              <p>Muy pronto</p>
             </div>
             <div className="mb-3">
               <h2>Proceso de planificación y problemas</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                sed fringilla purus. Cras at elit urna. Quisque quis neque
-                iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi
-                turpis, quis venenatis orci malesuada non. Aliquam felis justo,
-                suscipit et mauris non, tempus placerat nulla.
-              </p>
+              <p>Muy pronto</p>
             </div>
             <div className="project__stack ">
               <h2>Lección aprendida</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                sed fringilla purus. Cras at elit urna. Quisque quis neque
-                iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi
-                turpis, quis venenatis orci malesuada non. Aliquam felis justo,
-                suscipit et mauris non, tempus placerat nulla.
-              </p>
+              <p>Muy pronto</p>
             </div>
           </div>
         </div>

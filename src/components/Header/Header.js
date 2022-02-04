@@ -26,10 +26,10 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   return (
     <header>
       <div className="container">
-        <Link to="/">
-          <div class="logo">
+        <Link class="logo" to="/">
+          <h3>
             luisma<span>.dev</span>
-          </div>
+          </h3>
         </Link>
         <i
           class="fas fa-bars header__mobileMenu"
@@ -42,16 +42,16 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
             </a>
           </li>
           <li>
-            <a href="#projects">Portfolio</a>
+            <a href="#projects">Proyectos</a>
           </li>
           <li>
             <a href="#contact" onClick={handleOnClickContact}>
-              Contact me
+              Contacto
             </a>
           </li>
           <li>
             <a href={CV} className="header__button">
-              Download CV
+              Descargar CV
             </a>
           </li>
         </ul>
