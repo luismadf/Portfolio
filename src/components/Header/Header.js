@@ -1,5 +1,7 @@
 import React from "react";
 import CV from "../../images/luisdefreitescv.pdf";
+import { Link } from "react-router-dom";
+
 import { contactInfo } from "../../utils";
 
 import "./Header.css";
@@ -24,9 +26,11 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   return (
     <header>
       <div className="container">
-        <div class="logo">
-          luisma<span>.dev</span>
-        </div>
+        <Link class="logo" to="/">
+          <h3>
+            luisma<span>.dev</span>
+          </h3>
+        </Link>
         <i
           class="fas fa-bars header__mobileMenu"
           onClick={() => handleOnMobileMenu()}
@@ -38,16 +42,16 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
             </a>
           </li>
           <li>
-            <a href="#projects">Portfolio</a>
+            <a href="#projects">Proyectos</a>
           </li>
           <li>
             <a href="#contact" onClick={handleOnClickContact}>
-              Contact me
+              Contacto
             </a>
           </li>
           <li>
             <a href={CV} className="header__button">
-              Download CV
+              Descargar CV
             </a>
           </li>
         </ul>

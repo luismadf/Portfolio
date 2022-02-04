@@ -1,3 +1,42 @@
+.project {
+  width: 100%;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project .text {
+  display: flex;
+  padding: 50px 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project .text h2 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.project .text p {
+  text-align: justify;
+}
+
+.project-2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 500px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -3px 9px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
 .project img {
   height: 250px;
   margin-bottom: 24px;
@@ -26,11 +65,11 @@
   background-color: transparent;
   font-family: "Commissioner", sans-serif;
   transition: 0.4s;
-  color: #333;
+  color: var(--dark);
 }
 
 .project__button:visited {
-  color: #333;
+  color: var(--dark);
 }
 
 .project__button i {

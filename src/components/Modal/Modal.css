@@ -81,11 +81,11 @@
 }
 
 .GithubButton {
-  background-color: #333;
+  background-color: var(--dark);
 }
 
 .NormalButton {
-  background-color: #4398f1;
+  background-color: var(--primary);
 }
 
 .modal__socialMedia {
