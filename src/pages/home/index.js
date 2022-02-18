@@ -7,16 +7,16 @@ import "./index.css";
 function Home() {
   return (
     <main>
-      <div class="hero mb-6">
+      <div class="hero mt-2 mb-6">
         <div className="container">
           <div class="hero__text">
-            <h1 class="hero__title">
+            <h2 class="hero__title">
               Hola, Soy Luis. <br /> <span>Front End Developer</span> en
               MyInvestor.
-            </h1>
-            <p class="hero__description">
+            </h2>
+            <h5 class="hero__description">
               Me encanta solucionar problemas y entregar excelencia.
-            </p>
+            </h5>
             <p class="hero__look">
               <a href="#projects">
                 Echa un vistazo a mis proyectos

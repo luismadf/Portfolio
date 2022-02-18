@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CV from "../../images/luisdefreitescv.pdf";
+import { gsap } from "gsap";
 import { Link } from "react-router-dom";
+import ImgLuis from "../../images/profile-round.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { contactInfo } from "../../utils";
 
-import "./Header.css";
+import "./Header.scss";
 
 const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   const { contactMeInfo, aboutInfo } = contactInfo;
@@ -23,9 +26,24 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
     setMobileMenu(!mobileMenu);
   };
 
+  useEffect(() => {
+    gsap.from(".logo", {
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.2,
+    });
+    gsap.from(".menu li", {
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.2,
+      y: 20,
+      stagger: 0.2,
+    });
+  }, []);
+
   return (
     <header>
-      <div className="container">
+      {/* <div className="container">
         <Link class="logo" to="/">
           <h3>
             luisma<span>.dev</span>
@@ -55,7 +73,42 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
+
+      <nav className="container">
+        <Link class="logo" to="/">
+          <h3>
+            luisma<span>.dev</span>
+          </h3>
+        </Link>
+
+        <ul className="nav__menu container">
+          <li>
+            <i class="fas fa-user" />
+            <a href="#about" onClick={handleOnClickAbout}>
+              About me
+            </a>
+          </li>
+          <li>
+            <i class="fas fa-suitcase"></i>
+            <a href="#projects">Proyectos</a>
+          </li>
+          <li>
+            <i class="fas fa-comment-dots"></i>
+            <a href="#contact" onClick={handleOnClickContact}>
+              Contacto
+            </a>
+          </li>
+          <li>
+            <i class="fas fa-book"></i>
+            <a href={CV} className="header__button">
+              Descargar CV
+            </a>
+          </li>
+        </ul>
+
+        <img src={ImgLuis} alt="Luis" />
+      </nav>
     </header>
   );
 };
