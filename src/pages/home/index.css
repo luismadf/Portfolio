@@ -14,9 +14,13 @@
   font-weight: 700;
 }
 
+.hero__description {
+  font-weight: 400;
+}
+
 .hero__look a {
   text-decoration: none;
-  color: #8c8c8c;
+  color: var(--light-gray);
   transition: 0.3s;
 }
 
