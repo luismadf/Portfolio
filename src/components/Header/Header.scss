@@ -65,7 +65,7 @@ header {
     max-height: 40px;
   }
 
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     .container {
       display: flex;
       justify-content: space-between;
