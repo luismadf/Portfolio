@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import { Layout, Hero, ProjectList } from "../components";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "../components";
 import Project from "./project";
 import Home from "./home";
+
 import "./index.css";
 
 function App() {

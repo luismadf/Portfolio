@@ -1,10 +1,10 @@
-import React from "react";
-import CV from "../../images/luisdefreitescv.pdf";
-import { Link } from "react-router-dom";
-
+import React, { useEffect } from "react";
 import { contactInfo } from "../../utils";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import CV from "../../images/luisdefreitescv.pdf";
 
-import "./Header.css";
+import "./Header.scss";
 
 const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   const { contactMeInfo, aboutInfo } = contactInfo;
@@ -22,6 +22,21 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   const handleOnMobileMenu = () => {
     setMobileMenu(!mobileMenu);
   };
+
+  useEffect(() => {
+    gsap.from(".logo", {
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.2,
+    });
+    gsap.from(".menu li", {
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.2,
+      y: 20,
+      stagger: 0.2,
+    });
+  }, []);
 
   return (
     <header>
