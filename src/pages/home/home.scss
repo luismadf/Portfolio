@@ -1,4 +1,4 @@
-/* HERO */
+@import "../../styles/variables.scss";
 
 .hero .container {
   display: flex;
@@ -38,7 +38,7 @@
   border-radius: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $lg) {
   .hero .container {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -73,7 +73,7 @@
   grid-gap: calc(var(--spacer) * 6);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $lg) {
   .projects__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

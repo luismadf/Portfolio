@@ -2,12 +2,14 @@ import { useParams } from "react-router-dom";
 import { getProjectById } from "../../utils/projectList";
 import Image from "../../images/Cover.png";
 
-import "./project.css";
+import "./project.scss";
 
-const Project = () => {
+const Project: React.FC = () => {
   let { id } = useParams();
+
   const [{ name, info, desktop, mobile, stack, code, live }] =
     getProjectById(id);
+
   return (
     <>
       <div className="container">
@@ -47,44 +49,6 @@ const Project = () => {
             </div>
           </div>
           <div className="intro__image">
-            {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="
-            0
-            0
-            414.34375
-            32
-          "
-            style={{
-              borderRadius: "8px 8px 0px 0px",
-              backgroundColor: "rgb(232, 232, 232",
-            }}
-          >
-            <g fill="none" fill-rule="nonzero">
-              <rect width="100%" fill="#e8e8e8"></rect>
-              <circle
-                stroke="#F04744"
-                fill="#FF5F56"
-                cx="20"
-                cy="17"
-                r="6"
-              ></circle>
-              <circle
-                stroke="#EBA03F"
-                fill="#FFBD2E"
-                cx="40"
-                cy="17"
-                r="6"
-              ></circle>
-              <circle
-                stroke="#13AB42"
-                fill="#27C93F"
-                cx="60"
-                cy="17"
-                r="6"
-              ></circle>
-            </g>
-          </svg> */}
             <img src={mobile} alt="" />
           </div>
         </div>
@@ -95,11 +59,13 @@ const Project = () => {
         </div>
 
         <div className="project__planning mb-5">
-          <div className="planning__img">
-            <img src={desktop || Image} alt="Project Cover" />
-          </div>
+          <img
+            className="project__planning--img"
+            src={desktop || Image}
+            alt="Project Cover"
+          />
 
-          <div className="plannig__text">
+          <div className="project__planning--text">
             <div className="project__stack mb-3">
               <h2>Explicación del Stack</h2>
               <p>Muy pronto</p>

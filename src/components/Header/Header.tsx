@@ -2,19 +2,28 @@ import React, { useEffect } from "react";
 import { contactInfo } from "../../utils";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import CV from "../../images/luisdefreitescv.pdf";
 
 import "./Header.scss";
 
-const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
+interface HeaderProps {
+  onOpenModal: () => {};
+  mobileMenu: Boolean;
+  setMobileMenu: () => {};
+}
+
+const Header: React.FC<HeaderProps> = ({
+  onOpenModal,
+  mobileMenu,
+  setMobileMenu,
+}: any) => {
   const { contactMeInfo, aboutInfo } = contactInfo;
 
-  const handleOnClickAbout = (e) => {
+  const handleOnClickAbout = (e: any) => {
     e.preventDefault();
     onOpenModal(aboutInfo);
   };
 
-  const handleOnClickContact = (e) => {
+  const handleOnClickContact = (e: any) => {
     e.preventDefault();
     onOpenModal(contactMeInfo);
   };
@@ -41,13 +50,13 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
   return (
     <header>
       <div className="container">
-        <Link class="logo" to="/">
+        <Link className="logo" to="/">
           <h3>
             luisma<span>.dev</span>
           </h3>
         </Link>
         <i
-          class="fas fa-bars header__mobileMenu"
+          className="fas fa-bars header__mobileMenu"
           onClick={() => handleOnMobileMenu()}
         ></i>
         <ul className="menu">
@@ -65,9 +74,7 @@ const Header = ({ onOpenModal, mobileMenu, setMobileMenu }) => {
             </a>
           </li>
           <li>
-            <a href={CV} className="header__button">
-              Descargar CV
-            </a>
+            <a className="header__button">Descargar CV</a>
           </li>
         </ul>
       </div>
