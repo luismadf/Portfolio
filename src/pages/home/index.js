@@ -2,7 +2,7 @@ import ImgLuis from "../../images/luis1.png";
 import { Project } from "../../components";
 import { projectList } from "../../utils/projectList";
 
-import "./index.css";
+import "./home.scss";
 
 function Home() {
   return (
