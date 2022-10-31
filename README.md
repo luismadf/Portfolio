@@ -8,7 +8,7 @@ https://devluismadf.netlify.app/
 
 # Live
 
-https://luismadf.netlify.app/
+https://luisma.dev/
 
 # Resources
 
