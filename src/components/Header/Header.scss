@@ -1,10 +1,18 @@
 @import "../../styles/variables.scss";
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  // backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: rgba(2, 1, 1, 0.1) 0px 5px 20px -5px;
+  z-index: 3;
+
   .container {
     display: flex;
     justify-content: space-between;
-    padding: calc(var(--spacer) * 1.5) 0;
+    padding: var(--spacer) 0;
   }
   .menu {
     display: none;
@@ -98,8 +106,10 @@ header {
 
       &:hover {
         transform: scale(1.05);
-        -webkit-box-shadow: var(--box-shadow);
-        box-shadow: var(--box-shadow);
+        // -webkit-box-shadow: var(--box-shadow);
+        // box-shadow: var(--box-shadow);
+        cursor: pointer;
+        // box-shadow: rgba(67, 152, 241, 0.5) 0px 0px 15px 0px;
       }
 
       &:hover::after {

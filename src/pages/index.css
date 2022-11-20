@@ -31,6 +31,7 @@ body {
   background-color: var(--background);
   color: var(--dark);
   position: relative;
+  margin-top: 100px;
 }
 
 body.dark {
@@ -106,6 +107,10 @@ p {
 
 .mt-6 {
   margin-top: calc(var(--spacer) * 6);
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .mb-1 {

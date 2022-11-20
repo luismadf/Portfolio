@@ -42,7 +42,6 @@ const Header: React.FC<HeaderProps> = ({
       opacity: 0,
       duration: 0.8,
       delay: 0.2,
-      y: 20,
       stagger: 0.2,
     });
   }, []);
@@ -51,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({
     <header>
       <div className="container">
         <Link className="logo" to="/">
-          <h3>
+          <h3 className="mb-0">
             luisma<span>.dev</span>
           </h3>
         </Link>
