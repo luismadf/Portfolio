@@ -1,6 +1,7 @@
 import ImgLuis from "../../images/luis1.png";
 import { Project } from "../../components";
 import { projectList } from "../../utils/projectList";
+import { Text } from "@nextui-org/react";
 
 import "./home.scss";
 
@@ -10,10 +11,11 @@ function Home() {
       <div class="hero mt-2 mb-6">
         <div className="container">
           <div class="hero__text">
-            <h2 class="hero__title">
-              Hola, Soy Luis. <br /> <span>Front End Developer</span> en
-              MyInvestor.
-            </h2>
+            <Text size="$5xl">Hi, I'm Luis.</Text>
+            <Text size="$5xl" span weight="bold">
+              Front End Developer
+            </Text>
+            <Text size="$5xl">at Intelygenz.</Text>
             <h5 class="hero__description">
               Me encanta solucionar problemas y entregar excelencia.
             </h5>

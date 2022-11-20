@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { contactInfo } from "../../utils";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { gsap } from "gsap";
+import { Navbar, Button, Text, Link } from "@nextui-org/react";
 
 import "./Header.scss";
 
@@ -48,37 +49,62 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   return (
-    <header>
-      <div className="container">
-        <Link className="logo" to="/">
-          <h3>
-            luisma<span>.dev</span>
-          </h3>
-        </Link>
-        <i
-          className="fas fa-bars header__mobileMenu"
-          onClick={() => handleOnMobileMenu()}
-        ></i>
-        <ul className="menu">
-          <li>
-            <a href="#about" onClick={handleOnClickAbout}>
-              About me
-            </a>
-          </li>
-          <li>
-            <a href="#projects">Proyectos</a>
-          </li>
-          <li>
-            <a href="#contact" onClick={handleOnClickContact}>
-              Contacto
-            </a>
-          </li>
-          <li>
-            <a className="header__button">Descargar CV</a>
-          </li>
-        </ul>
-      </div>
-    </header>
+    // <header>
+    //   <div className="container">
+    //     <Link className="logo" to="/">
+    //       <h3>
+    //         luisma<span>.dev</span>
+    //       </h3>
+    //     </Link>
+    //     <i
+    //       className="fas fa-bars header__mobileMenu"
+    //       onClick={() => handleOnMobileMenu()}
+    //     ></i>
+    //     <ul className="menu">
+    //       <li>
+    //         <a href="#about" onClick={handleOnClickAbout}>
+    //           About me
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href="#projects">Proyectos</a>
+    //       </li>
+    //       <li>
+    //         <a href="#contact" onClick={handleOnClickContact}>
+    //           Contacto
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a className="header__button">Descargar CV</a>
+    //       </li>
+    //     </ul>
+    //   </div>
+    // </header>
+
+    <Navbar variant="sticky">
+      <Navbar.Brand>
+        <Text h3 weight="light" className="header__brand">
+          luisma
+          <Text span b>
+            .dev
+          </Text>
+        </Text>
+      </Navbar.Brand>
+      <Navbar.Content hideIn="xs" variant="underline">
+        <Navbar.Link href="#about">About me</Navbar.Link>
+        <Navbar.Link isActive href="#projects">
+          Proyectos
+        </Navbar.Link>
+        <Navbar.Link onClick={handleOnClickContact}>Contacto</Navbar.Link>
+      </Navbar.Content>
+      <Navbar.Content>
+        <Navbar.Item>
+          <Button auto flat as={Link} href="/">
+            Descargar CV
+          </Button>
+        </Navbar.Item>
+      </Navbar.Content>
+    </Navbar>
   );
 };
 

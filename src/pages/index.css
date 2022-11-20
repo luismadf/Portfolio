@@ -27,9 +27,27 @@ html {
   font-size: var(--spacer);
 }
 
+body::before {
+  filter: blur(30px);
+  filter: brightness(50%);
+  background: #16222a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3a6073,
+    #16222a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3a6073,
+    #16222a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 body {
-  background-color: var(--background);
-  color: var(--dark);
+  /* background-color: var(--background); */
+  /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+  /* color: var(--dark); */
+
   position: relative;
 }
 
@@ -70,9 +88,9 @@ p {
   margin-bottom: var(--spacer);
 }
 
-p {
+/* p {
   line-height: 1.8;
-}
+} */
 
 .container {
   width: 90%;
