@@ -73,6 +73,12 @@
   grid-gap: calc(var(--spacer) * 6);
 }
 
+.new__img img {
+  height: 500px;
+  // filter: grayscale(1);
+  border-radius: 10px;
+}
+
 @media (min-width: $lg) {
   .projects__list {
     display: grid;

@@ -90,16 +90,14 @@ const Header: React.FC<HeaderProps> = ({
           </Text>
         </Text>
       </Navbar.Brand>
-      <Navbar.Content hideIn="xs" variant="underline">
+      <Navbar.Content hideIn="xs">
         <Navbar.Link href="#about">About me</Navbar.Link>
-        <Navbar.Link isActive href="#projects">
-          Proyectos
-        </Navbar.Link>
+        <Navbar.Link href="#projects">Proyectos</Navbar.Link>
         <Navbar.Link onClick={handleOnClickContact}>Contacto</Navbar.Link>
       </Navbar.Content>
       <Navbar.Content>
         <Navbar.Item>
-          <Button auto flat as={Link} href="/">
+          <Button auto shadow as={Link} href="/">
             Descargar CV
           </Button>
         </Navbar.Item>
