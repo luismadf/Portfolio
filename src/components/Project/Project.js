@@ -1,11 +1,9 @@
-import React from "react";
-import Image from "../../images/Cover.png";
 import { useNavigate } from "react-router-dom";
 
 import "./Project.css";
 
 const Project = ({ project }) => {
-  const { id, name, image, info, buttonColor } = project;
+  const { id, name, images, info, buttonColor } = project;
   let navigate = useNavigate();
   const handleClick = (id) => {
     navigate(`/project/${id}`);
@@ -15,7 +13,7 @@ const Project = ({ project }) => {
     <>
       <div className="project">
         <img
-          src={image || Image}
+          src={images?.show || "/images/Cover.png"}
           alt="Project Cover"
           onClick={() => handleClick(id)}
         />
