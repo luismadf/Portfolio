@@ -1,6 +1,6 @@
-import "./MobileMenu.css";
 import { contactInfo } from "../../utils";
-import CV from "../../images/luisdefreitescv.pdf";
+
+import "./MobileMenu.css";
 
 const Menu = ({
   handleOnClickAbout,
@@ -25,7 +25,7 @@ const Menu = ({
         </a>
       </li>
       <li>
-        <a href={CV}>Download CV</a>
+        <a href="/images/luisdefreitescv.pdf">Download CV</a>
       </li>
     </ul>
   );

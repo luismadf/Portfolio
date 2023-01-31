@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
 import { getProjectById } from "../../utils/projectList";
-import Image from "../../images/Cover.png";
 
 import "./project.scss";
 
 const Project: React.FC = () => {
   let { id } = useParams();
 
-  const [{ name, info, desktop, mobile, stack, code, live }] =
-    getProjectById(id);
+  const [{ name, info, images, stack, code, live }] = getProjectById(id);
 
   return (
     <>
@@ -30,7 +28,7 @@ const Project: React.FC = () => {
                 <ul>
                   <li className="title">CÓDIGO</li>
                   <li>
-                    <a href={code} target="_blank">
+                    <a href={code} target="_blank" rel="noopener">
                       Ir al Código
                     </a>
                   </li>
@@ -40,7 +38,7 @@ const Project: React.FC = () => {
                 <ul>
                   <li className="title">LIVE</li>
                   <li>
-                    <a href={live} target="_blank">
+                    <a href={live} target="_blank" rel="noopener">
                       Ir a la Web
                     </a>
                   </li>
@@ -49,7 +47,7 @@ const Project: React.FC = () => {
             </div>
           </div>
           <div className="intro__image">
-            <img src={mobile} alt="" />
+            <img src={images.mobile} alt="" />
           </div>
         </div>
 
@@ -61,7 +59,7 @@ const Project: React.FC = () => {
         <div className="project__planning mb-5">
           <img
             className="project__planning--img"
-            src={desktop || Image}
+            src={images.desktop || "/images/Cover.png"}
             alt="Project Cover"
           />
 

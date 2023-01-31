@@ -1,28 +1,3 @@
-import Batatabit from "../images/projects/batatabit/show.png";
-import BatatabitDesktop from "../images/projects/batatabit/desktop.jpg";
-import BatatabitMobile from "../images/projects/batatabit/mobile.png";
-
-import Crowfund from "../images/projects/crowdfund/show.png";
-import CrowfundDesktop from "../images/projects/crowdfund/desktop.jpg";
-import CrowfundMobile from "../images/projects/crowdfund/mobile.png";
-
-import Loopstudio from "../images/projects/loopstudio/show.png";
-import LoopstudioDesktop from "../images/projects/loopstudio/desktop.jpg";
-import LoopstudioMobile from "../images/projects/loopstudio/mobile.png";
-
-import Sunnyside from "../images/projects/sunnyside/show.png";
-import SunnysideDesktop from "../images/projects/sunnyside/desktop.jpg";
-import SunnysideMobile from "../images/projects/sunnyside/mobile.png";
-
-import Luisexchange from "../images/Luisexchange.png";
-import LuisexchangeLaptop from "../images/p7.jpg";
-import Bienesraices from "../images/Bienesraices.png";
-import BienesraicesLaptop from "../images/p10.jpg";
-import MERNTask from "../images/MERNTask.png";
-import MERNTaskLaptop from "../images/p8.jpg";
-import Digitalproduct from "../images/Digitalproduct.png";
-import DigitalproductLaptop from "../images/p9.jpg";
-
 export const projectList = [
   {
     id: 1,
@@ -33,9 +8,11 @@ export const projectList = [
       description:
         "Batatabit es un servicio que te ayuda a cumplir tus sueños a traves de la criptomonedas, si, como lo leiste, compra y vende con nosotros, no hay tasas escondidas, te mostramos las tendencias del mercado para que estes preparados y ademas con nuestra API puedes obtener información y realizar tu ¡AL INSTANTE!",
     },
-    image: Batatabit,
-    desktop: BatatabitDesktop,
-    mobile: BatatabitMobile,
+    images: {
+      show: "/images/projects/batatabit/show.png",
+      desktop: "/images/projects/batatabit/desktop.jpg",
+      mobile: "/images/projects/batatabit/mobile.png",
+    },
     buttonColor: "orange",
     stack: ["html", "css", "javascript"],
     code: "https://github.com/luismadf/Batatabit",
@@ -50,9 +27,11 @@ export const projectList = [
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
     },
-    image: Crowfund,
-    desktop: CrowfundDesktop,
-    mobile: CrowfundMobile,
+    images: {
+      show: "/images/projects/crowdfund/show.png",
+      desktop: "/images/projects/crowdfund/desktop.jpg",
+      mobile: "/images/projects/crowdfund/mobile.png",
+    },
     buttonColor: "blue",
     stack: ["html", "css", "javascript"],
     code: "https://github.com/luismadf/Crowdfund",
@@ -67,9 +46,11 @@ export const projectList = [
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
     },
-    image: Loopstudio,
-    desktop: LoopstudioDesktop,
-    mobile: LoopstudioMobile,
+    images: {
+      show: "/images/projects/loopstudio/show.png",
+      desktop: "/images/projects/loopstudio/desktop.jpg",
+      mobile: "/images/projects/loopstudio/mobile.png",
+    },
     buttonColor: "pink",
     stack: ["html", "css", "javascript"],
     code: "https://github.com/luismadf/Loopstudio",
@@ -84,9 +65,11 @@ export const projectList = [
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
     },
-    image: Sunnyside,
-    desktop: SunnysideDesktop,
-    mobile: SunnysideMobile,
+    images: {
+      show: "/images/projects/sunnyside/show.png",
+      desktop: "/images/projects/sunnyside/desktop.jpg",
+      mobile: "/images/projects/sunnyside/mobile.png",
+    },
     buttonColor: "red",
     stack: ["html", "css", "javascript"],
     code: "https://github.com/luismadf/SunnysideAgency",

@@ -1,4 +1,3 @@
-import ImgLuis from "../../images/luis1.png";
 import { Project } from "../../components";
 import { projectList } from "../../utils/projectList";
 
@@ -25,7 +24,7 @@ function Home() {
             </p>
           </div>
           <div className="img">
-            <img src={ImgLuis} alt="Luis" />
+            <img src="/images/luis1.png" alt="Luis" />
           </div>
         </div>
       </div>
