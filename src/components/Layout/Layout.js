@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import { Modal, Footer, Header, MobileMenu } from "../";
-import { useModal } from "../../hooks";
+import { useState } from "react";
+import { Modal, Footer, Header, MobileMenu } from "components";
+import { useModal } from "hooks";
+
+import "./Layout.scss";
 
 const Layout = (props) => {
   const [modalInfo, handleOnClickModal] = useModal();
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <>
+    <div className="layout">
       <Header
         onOpenModal={handleOnClickModal}
         mobileMenu={mobileMenu}
@@ -21,7 +23,7 @@ const Layout = (props) => {
         setMobileMenu={setMobileMenu}
         handleOnClickModal={handleOnClickModal}
       />
-    </>
+    </div>
   );
 };
 

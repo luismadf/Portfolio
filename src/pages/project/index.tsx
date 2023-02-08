@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { getProjectById } from "../../utils/projectList";
+import { getProjectById } from "utils";
 
 import "./project.scss";
 
@@ -28,7 +28,7 @@ const Project: React.FC = () => {
                 <ul>
                   <li className="title">CÓDIGO</li>
                   <li>
-                    <a href={code} target="_blank" rel="noopener">
+                    <a href={code} target="_blank" rel="noreferrer">
                       Ir al Código
                     </a>
                   </li>
@@ -38,7 +38,7 @@ const Project: React.FC = () => {
                 <ul>
                   <li className="title">LIVE</li>
                   <li>
-                    <a href={live} target="_blank" rel="noopener">
+                    <a href={live} target="_blank" rel="noreferrer">
                       Ir a la Web
                     </a>
                   </li>
