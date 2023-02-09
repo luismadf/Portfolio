@@ -6,20 +6,20 @@ import "./home.scss";
 function Home() {
   return (
     <main>
-      <div class="hero mt-2 mb-6">
+      <div className="hero mt-2 mb-6">
         <div className="container">
-          <div class="hero__text">
-            <h2 class="hero__title">
+          <div className="hero__text">
+            <h2 className="hero__title">
               Hola, Soy Luis. <br /> <span>Front End Developer</span> en
               MyInvestor.
             </h2>
-            <h5 class="hero__description">
+            <h5 className="hero__description">
               Me encanta solucionar problemas y entregar excelencia.
             </h5>
-            <p class="hero__look">
+            <p className="hero__look">
               <a href="#projects">
                 Echa un vistazo a mis proyectos
-                <i class="fas fa-arrow-down"></i>
+                <i className="fas fa-arrow-down"></i>
               </a>
             </p>
           </div>
@@ -29,7 +29,7 @@ function Home() {
         </div>
       </div>
 
-      <div class="container mb-6" id="projects">
+      <div className="container mb-6" id="projects">
         <h2 className="projects__title mb-6">
           Mis <span>proyectos</span>
         </h2>
