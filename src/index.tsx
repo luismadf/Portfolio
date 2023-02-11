@@ -3,6 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./pages";
 
+import "./index.css";
+
 ReactDOM.render(
   <BrowserRouter>
     <App />
