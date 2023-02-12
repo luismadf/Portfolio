@@ -1,5 +1,3 @@
-import { contactInfo } from "../../utils";
-
 import "./MobileMenu.css";
 
 const Menu = ({
@@ -32,8 +30,6 @@ const Menu = ({
 };
 
 const MobileMenu = ({ mobileMenu, setMobileMenu, handleOnClickModal }) => {
-  const { contactMeInfo, aboutInfo } = contactInfo;
-
   const handleOnClickAbout = (e) => {
     e.preventDefault();
     setMobileMenu(!mobileMenu);

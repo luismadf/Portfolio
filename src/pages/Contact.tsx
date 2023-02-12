@@ -1,4 +1,4 @@
-import ContactIcons from "components/ContactIcons";
+import { ContactIcons } from "components";
 
 const Contact = () => {
   return (

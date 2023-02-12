@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ mobileMenu, setMobileMenu }: any) => {
 
   return (
     <header>
-      <div className="container py-6 flex justify-between">
+      <div className="container mx-auto py-6 flex justify-between">
         <Logo />
         <i
           className="fas fa-bars text-xl md:hidden"

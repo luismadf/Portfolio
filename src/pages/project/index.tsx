@@ -10,7 +10,7 @@ const Project: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container mx-auto">
         <div className="project__intro mb-5">
           <div className="intro__text">
             <h1>{name}</h1>
