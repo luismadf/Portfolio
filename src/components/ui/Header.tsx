@@ -1,21 +1,12 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
-import { Logo, Menu } from "components";
+import { Logo, Menu, MobileMenu } from "components";
 
-interface HeaderProps {
-  mobileMenu: Boolean;
-  setMobileMenu: () => {};
-}
-
-const Header: React.FC<HeaderProps> = ({ mobileMenu, setMobileMenu }: any) => {
+const Header: React.FC = () => {
   let navigate = useNavigate();
 
   const handleOnNavigate = (path: string) => navigate(path);
-
-  const handleOnMobileMenu = () => {
-    setMobileMenu(!mobileMenu);
-  };
 
   const menuItems = [
     {
@@ -42,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ mobileMenu, setMobileMenu }: any) => {
       duration: 0.8,
       delay: 0.2,
     });
-    gsap.from(".menu li", {
+    gsap.from(".menu-item", {
       opacity: 0,
       duration: 0.8,
       delay: 0.2,
@@ -55,10 +46,7 @@ const Header: React.FC<HeaderProps> = ({ mobileMenu, setMobileMenu }: any) => {
     <header>
       <div className="container mx-auto py-6 flex justify-between">
         <Logo />
-        <i
-          className="fas fa-bars text-xl md:hidden"
-          onClick={() => handleOnMobileMenu()}
-        ></i>
+        <MobileMenu items={menuItems} />
         <Menu items={menuItems} className="hidden md:flex" />
       </div>
     </header>

@@ -5,7 +5,11 @@ module.exports = {
     container: {
       padding: "2rem",
     },
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        layout: "auto 1fr auto",
+      },
+    },
   },
   plugins: [],
 };

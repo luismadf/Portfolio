@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
     <footer className="bg-blue-500 text-white">
       <div className="container mx-auto py-8 flex flex-col items-center md:flex-row md:justify-between">
         <Logo />
-        <Menu items={menuItems} color="white" />
+        <Menu items={menuItems} color="after:bg-white" />
       </div>
     </footer>
   );

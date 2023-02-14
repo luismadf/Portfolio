@@ -5,3 +5,4 @@ export { default as Menu } from "./Menu";
 export { default as ContactIcons } from "./ContactIcons";
 export { default as ProjectList } from "./ProjectList";
 export { default as Project } from "./Project";
+export { default as MobileMenu } from "./MobileMenu";
