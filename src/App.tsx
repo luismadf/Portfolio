@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { AboutMe, Contact, Home, Project } from "pages";
+import { AboutMe, Contact, CV, Home, Project } from "pages";
 import { Layout } from "components";
 
 const App = () => {
@@ -10,6 +10,7 @@ const App = () => {
         <Route path="/project/:id" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/aboutme" element={<AboutMe />} />
+        <Route path="/curriculum" element={<CV />} />
       </Routes>
     </Layout>
   );

@@ -22,7 +22,7 @@ const Header: React.FC = () => {
     {
       id: "3",
       text: "Descargar CV",
-      onClick: () => {},
+      onClick: () => handleOnNavigate("/curriculum"),
       cta: true,
     },
   ];
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
   return (
     <header>
       <div className="container mx-auto py-6 flex justify-between">
-        <Logo />
+        <Logo showPicture={true} />
         <MobileMenu items={menuItems} />
         <Menu items={menuItems} className="hidden md:flex" />
       </div>

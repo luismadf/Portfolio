@@ -21,7 +21,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           onClick={() => handleClick(id)}
         />
         <h3
-          className="peer/project-title text-2xl font-medium mb-6 cursor-pointer"
+          className="peer/project-title text-3xl font-bold mb-6 cursor-pointer"
           onClick={() => handleClick(id)}
         >
           {name || "Project Name"}
