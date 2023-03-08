@@ -105,6 +105,60 @@ export const projectList = [
   }, */
 ];
 
-export const getProjectById = (id) => {
+export const getProjectById = (id: any) => {
   return projectList.filter((project) => project.id === parseInt(id));
+};
+
+export const cvInfo = {
+  name: "Luis",
+  lastName: "De Freites",
+  position: "Front-end Developer",
+  image: "/images/cv-profile.png",
+  description:
+    "I’m a self-taught front-end developer, focused on the Marketing Automation domain. I primarily work with React and NextJs, but I’m equally capable in Vanilla javascript and Node. My experience includes coding/crafting Landing Pages and Emails, automation of Marketing Campaigns and segmentation, UI & UX, as well as integration with 3rd-party services and system like Hubspot and Wordpress. I'm agile on process optimization, and diligently work to improve our internal processes and reduce time-to-market for our tools and services. I’m an easy-going developer, naturally able to slide into any team and bring value from day 1.",
+  social: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/luis-de-freites-6a5888181/",
+    },
+    {
+      name: "email",
+      url: "mailto:luisdefreites120@gmail.com",
+    },
+  ],
+  experience: [
+    {
+      companyName: "Intelygenz",
+      position: "Front-end Developer",
+      time: "oct 2022 - now",
+    },
+    {
+      companyName: "MyInvestor",
+      position: "Front-end Developer",
+      time: "jun 2021 - oct 2022",
+    },
+    {
+      companyName: "Rentchester",
+      position: "Front-end Developer",
+      time: "abr 2021 - jun 2021",
+    },
+  ],
+  skills: [
+    "Component Architecture",
+    "React, Next, Redux, React Native",
+    "Node and Express",
+    "Javascript / Typescript",
+    "REST API Consumption",
+    "Advanced CSS (Flexbox, Grid) and SASS",
+    "Bootstrap, MaterialUI, Next UI, Storybook",
+    "Marketing Automation",
+    "Version Control through GIT, GitFlow",
+  ],
+  education: [
+    {
+      title: "title",
+      description: "description",
+    },
+  ],
+  languages: ["English - CI", "Spanish - Native"],
 };
