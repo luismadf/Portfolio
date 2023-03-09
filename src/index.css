@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;400;500;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Commissioner", sans-serif;
+}
+
+p,
+span {
+  font-family: "Open sans", sans-serif;
+}
+
+.curriculum h2 {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
