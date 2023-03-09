@@ -12,3 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prettier ignore file
 ## Changed
 - The nav code has been changed to two bars
+
+## [2.0.0] - 2022-02-09
+## Changed
+- Swicthed from CRA to Vite
