@@ -16,11 +16,6 @@ const Header: React.FC = () => {
     },
     {
       id: "2",
-      text: "Contacto",
-      onClick: () => handleOnNavigate("/contact"),
-    },
-    {
-      id: "3",
       text: "Descargar CV",
       onClick: () => handleOnNavigate("/curriculum"),
       cta: true,
