@@ -7,7 +7,7 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ showPicture = false }) => {
   return (
     <Link to="/">
-      <div className="flex items-center font-light text-3xl mb-6 md:mb-0">
+      <div className="flex items-center font-light text-3xl md:mb-0">
         {showPicture ? (
           <img
             src="/images/circle-luis.png"

@@ -44,7 +44,7 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <div className="container mx-auto py-6 flex justify-between">
+      <div className="container mx-auto py-6 flex justify-between items-center">
         <Logo showPicture={true} />
         <MobileMenu items={menuItems} />
         <Menu items={menuItems} className="hidden md:flex" />
