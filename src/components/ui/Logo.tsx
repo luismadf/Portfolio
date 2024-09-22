@@ -1,24 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 interface LogoProps {
-  showPicture?: Boolean;
+  showLogoImage?: Boolean
 }
 
-const Logo: React.FC<LogoProps> = ({ showPicture = false }) => {
+const Logo: React.FC<LogoProps> = ({ showLogoImage }) => {
   return (
-    <Link to="/">
-      <div className="flex items-center font-light text-3xl md:mb-0">
-        {showPicture ? (
-          <img
-            src="/images/circle-luis.png"
-            alt="luis picture"
-            className="h-10 w-10 mr-3"
-          />
-        ) : null}
-        luisma<span className="font-bold">.dev</span>
+    <Link to='/'>
+      <div className='flex items-center font-light text-3xl md:mb-0'>
+        {showLogoImage && (
+          <img src='/images/circle-luis.png' alt='luis picture' className='h-10 w-10 mr-3' />
+        )}
+        <h3 className='logo font-normal'>
+          luisma<span className='font-bold'>.dev</span>
+        </h3>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo
