@@ -1,25 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;400;500;700&display=swap");
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Commissioner", sans-serif;
-}
-
-p,
-span {
-  font-family: "Open sans", sans-serif;
-}
-
-.curriculum h2 {
-  font-family: "Bai Jamjuree", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3 {
+  font-family: 'Commissioner', system-ui;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.1875rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5625rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5,
+p {
+  font-family: 'Open Sans', system-ui;
+  font-size: 1rem;
+}
+
+button {
+  font-family: 'Open Sans', system-ui;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.logo {
+  font-family: 'Open Sans', system-ui;
+  font-size: 1.625rem;
+}
+
+.link {
+  font-family: 'Open Sans', system-ui;
+  font-size: 1;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.4375rem;
+  }
+
+  h2 {
+    font-size: 2.8125rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.875rem;
+  }
+
+  h5 {
+    font-size: 1.625rem;
+  }
+}
