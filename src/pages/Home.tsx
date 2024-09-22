@@ -1,4 +1,4 @@
-import { ProjectList } from 'components'
+import { Project } from 'components'
 import { projectList } from 'utils'
 
 const Home = () => {
@@ -18,8 +18,10 @@ const Home = () => {
         </h5>
       </section>
 
-      <section className='container mx-auto mb-24'>
-        <ProjectList projects={projectList} />
+      <section className='container mx-auto mb-24 flex flex-col gap-12'>
+        {projectList.map((project: any) => (
+          <Project key={`project-${project.name}`} project={project} />
+        ))}
       </section>
     </main>
   )
