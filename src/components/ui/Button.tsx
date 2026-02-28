@@ -37,16 +37,16 @@ const Button = forwardRef<HTMLButtonElement, Props>(({
 
   const variants = {
     solid: [
-      'bg-linear-to-br from-primary to-blue-500',
-      'hover:from-blue-600 hover:to-primary',
+      'bg-primary hover:bg-primary-dark',
       'text-white rounded-md',
-      'shadow-md hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary/20',
+      'shadow-sm hover:shadow-md hover:shadow-primary/20',
     ].join(' '),
     icon: [
-      'bg-slate-100 dark:bg-slate-800',
-      'text-slate-500 dark:text-slate-400',
-      'hover:bg-slate-200 dark:hover:bg-slate-700',
-      'hover:text-primary dark:hover:text-primary',
+      'bg-surface dark:bg-dark-surface',
+      'text-muted dark:text-dark-muted',
+      'hover:bg-slate-200 dark:hover:bg-[#252322]',
+      'border border-transparent hover:border-slate-300 dark:hover:border-[#383330]',
+      'hover:text-ink dark:hover:text-white',
       'rounded-full',
       'touch-manipulation',
     ].join(' '),

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700&display=swap') layer(base);
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap') layer(base);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap') layer(base);
 
 @import 'tailwindcss';
 
@@ -18,17 +17,18 @@
 @theme {
   --grid-template-rows-layout: auto 1fr auto;
 
-  --color-primary: #2563eb;
+  /* Custom Palette Setup */
+  --color-primary: #E85D26;
+  --color-primary-dark: #C0471A;
+  --color-ink: #0F0F0F;
+  --color-surface: #F7F4EF;
+  --color-muted: #6B6560;
+  
+  --color-dark-bg: #111010;
+  --color-dark-surface: #1C1B1A;
+  --color-dark-muted: #8F8881;
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -41,53 +41,63 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
+    @apply bg-surface text-ink transition-colors duration-300 dark:bg-dark-bg dark:text-gray-100;
   }
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Commissioner', system-ui;
+  font-family: 'Fraunces', serif;
   font-weight: 700;
+  /* Reduced tracking for display fonts */
+  letter-spacing: -0.02em;
 }
 
 h1 {
   font-size: 2.1875rem;
+  line-height: 1.1;
 }
 
 h2 {
   font-size: 1.875rem;
+  line-height: 1.1;
 }
 
 h3 {
   font-size: 1.5625rem;
+  line-height: 1.2;
 }
 
 h4 {
   font-size: 1.125rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
 }
 
 h5,
 p {
-  font-family: 'Open Sans', system-ui;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 button {
-  font-family: 'Open Sans', system-ui;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .logo {
-  font-family: 'Open Sans', system-ui;
+  font-family: 'Fraunces', serif;
   font-size: 1.625rem;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 .link {
-  font-family: 'Open Sans', system-ui;
-  font-size: 1;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
 }
 
@@ -102,7 +112,6 @@ button {
 
   h3 {
     font-size: 2.5rem;
-    font-weight: 600;
   }
 
   h4 {

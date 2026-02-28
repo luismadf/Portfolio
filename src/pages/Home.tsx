@@ -10,29 +10,29 @@ const Home = () => {
       <SEO title="Luis de Freites | Frontend Developer" />
 
       {/* Hero */}
-      <section className='container mx-auto mt-12 mb-[84px] md:mt-[100px] md:mb-[140px] text-center flex flex-col gap-5'>
-        <h1 className='font-normal'>
+      <section className='container mx-auto mt-12 mb-[84px] md:mt-[120px] md:mb-[160px] flex flex-col items-center text-center gap-6'>
+        <h1 className='font-normal text-5xl md:text-7xl tracking-tight'>
           {t('home.greeting')}
           <br />
-          <span className='block md:inline font-bold'>{t('home.role')}</span> {t('home.at')}
+          <span className='block md:inline font-bold italic text-primary'>{t('home.role')}</span> {t('home.at')}
         </h1>
 
-        <p className='text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto'>
-          <Trans i18nKey="home.subtitle" components={{ bold: <span className='font-bold' /> }} />
+        <p className='text-lg md:text-xl text-muted dark:text-dark-muted max-w-2xl mx-auto'>
+          <Trans i18nKey="home.subtitle" components={{ bold: <span className='font-bold text-ink dark:text-white' /> }} />
         </p>
       </section>
 
       {/* About Me */}
-      <section className='container mx-auto mb-24'>
+      <section className='container mx-auto mb-32'>
         <div className='max-w-3xl mx-auto'>
-          <h2 className='text-2xl font-bold mb-8 text-center'>{t('home.aboutTitle')}</h2>
-          <div className='flex flex-col md:flex-row gap-8 items-start'>
+          <h2 className='text-3xl font-bold mb-10 text-center tracking-tight'>{t('home.aboutTitle')}</h2>
+          <div className='flex flex-col md:flex-row gap-10 items-center md:items-start'>
             <img
               src='/images/circle-luis.png'
               alt='Luis de Freites'
-              className='w-32 h-32 rounded-full mx-auto md:mx-0 shrink-0'
+              className='w-40 h-40 rounded-full mx-auto md:mx-0 shrink-0 shadow-xl shadow-primary/10'
             />
-            <div className='space-y-4 text-slate-600 dark:text-slate-300'>
+            <div className='space-y-5 text-muted dark:text-gray-300 text-lg'>
               <p>{t('home.aboutP1')}</p>
               <p>{t('home.aboutP2')}</p>
               <p>{t('home.aboutP3')}</p>
@@ -42,22 +42,22 @@ const Home = () => {
       </section>
 
       {/* Projects */}
-      <section className='container mx-auto mb-24 flex flex-col gap-12'>
+      <section className='container mx-auto mb-32 flex flex-col gap-20'>
         {projectList.map((project) => (
           <Project key={`project-${project.id}`} project={project} />
         ))}
       </section>
 
       {/* Contact */}
-      <section className='bg-linear-to-r from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 py-20 transition-colors duration-300'>
+      <section className='bg-slate-100 dark:bg-[#151413] py-24 transition-colors duration-300 border-y border-slate-200 dark:border-slate-800/50'>
         <div className='container mx-auto text-center'>
-          <h2 className='text-2xl font-bold mb-4'>{t('home.contactTitle')}</h2>
-          <p className='text-slate-500 dark:text-slate-400 mb-8 max-w-md mx-auto'>
+          <h2 className='text-3xl font-bold mb-6 tracking-tight'>{t('home.contactTitle')}</h2>
+          <p className='text-muted dark:text-dark-muted mb-10 max-w-md mx-auto text-lg'>
             {t('home.contactSubtitle')}
           </p>
           <a
             href='mailto:luisdefreites120@gmail.com'
-            className='inline-block px-6 py-3 bg-primary text-white rounded-md hover:bg-blue-700 transition-colors mb-6'
+            className='inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white rounded-md shadow-sm hover:shadow-md hover:shadow-primary/20 transition-all duration-200 px-8 py-4 font-semibold text-lg mb-8'
           >
             {t('home.contactEmail')}
           </a>

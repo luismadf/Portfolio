@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className="w-full bg-slate-50/80 backdrop-blur-md dark:bg-slate-950/80 sticky top-0 z-50 border-b border-transparent dark:border-slate-800 transition-colors duration-300">
+    <header className="w-full bg-surface/90 backdrop-blur-md dark:bg-dark-bg/90 sticky top-0 z-50 border-b-[3px] border-b-primary transition-colors duration-300">
       <div className='container mx-auto py-4 flex justify-between items-center'>
         <motion.div
           initial={{ opacity: 0 }}

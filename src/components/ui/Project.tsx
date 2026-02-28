@@ -22,16 +22,16 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         onClick={() => handleClick(id)}
       />
       <div>
-        <h3 className='peer/project-title mb-6 cursor-pointer' onClick={() => handleClick(id)}>
+        <h3 className='peer/project-title text-2xl md:text-3xl font-bold tracking-tight mb-4 cursor-pointer hover:text-primary transition-colors' onClick={() => handleClick(id)}>
           {name}
         </h3>
-        <p className='mb-4'>{t(`projects.${translationKey}.shortDescription`)}</p>
+        <p className='text-muted dark:text-gray-300 text-lg leading-relaxed mb-6'>{t(`projects.${translationKey}.shortDescription`)}</p>
         {stack && (
-          <div className='flex flex-wrap gap-2 mb-6'>
+          <div className='flex flex-wrap gap-2 mb-8'>
             {stack.map((tech) => (
               <span
                 key={tech}
-                className='px-3 py-1 text-xs font-medium uppercase rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300'
+                className='px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-md border border-slate-200 bg-surface/50 text-muted dark:border-slate-700 dark:bg-dark-surface dark:text-gray-400'
               >
                 {tech}
               </span>
@@ -39,7 +39,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           </div>
         )}
         <button
-          className={`group/project-button relative uppercase after:content-[' '] after:absolute after:-bottom-[4px] after:-left-[2px] after:h-[3px] after:w-[86%] md:hover:after:w-[86%] peer-hover/image:after:w-[86%] peer-hover/project-title:after:w-[86%] md:after:duration-500 md:after:w-[0%] md:cursor-pointer md:duration-500 after:rounded-md ${buttonColor}`}
+          className={`group/project-button relative font-bold uppercase tracking-widest text-sm after:content-[' '] after:absolute after:-bottom-[6px] after:-left-[2px] after:h-[3px] after:w-[86%] md:hover:after:w-[86%] peer-hover/image:after:w-[86%] peer-hover/project-title:after:w-[86%] md:after:duration-500 md:after:w-[0%] md:cursor-pointer md:duration-500 after:rounded-md after:bg-primary transition-colors hover:text-primary`}
           type='button'
           onClick={() => handleClick(id)}
         >
