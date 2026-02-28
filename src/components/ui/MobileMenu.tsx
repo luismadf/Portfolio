@@ -1,18 +1,20 @@
 import { useState } from "react";
+import { Menu } from "lucide-react";
+import { MobileMenuItem } from "types";
 
-interface MobileMenu {
-  items: any;
+interface MobileMenuProps {
+  items: MobileMenuItem[];
 }
 
-const MobileMenu: React.FC<MobileMenu> = ({ items = [] }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ items = [] }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const handleOnMobileMenu = () => setShowMobileMenu(!showMobileMenu);
 
   return (
     <>
-      <i
-        className="fas fa-bars text-xl md:hidden"
+      <Menu
+        className="w-6 h-6 md:hidden cursor-pointer"
         onClick={handleOnMobileMenu}
       />
       <div
@@ -23,11 +25,11 @@ const MobileMenu: React.FC<MobileMenu> = ({ items = [] }) => {
       >
         {showMobileMenu ? (
           <ul className="text-center">
-            {items.map(({ id, text, onClick }: any) => (
+            {items.map(({ id, text, onClick }) => (
               <li
                 key={`mobile-menu-item-${id}`}
                 onClick={onClick}
-                className="text-white text-xl pb-6"
+                className="text-white text-xl pb-6 cursor-pointer"
               >
                 {text}
               </li>

@@ -1,0 +1,89 @@
+{
+  "header": {
+    "downloadCV": "Descargar CV"
+  },
+  "home": {
+    "greeting": "Hola, soy Luis 👋",
+    "role": "Frontend Developer",
+    "at": "en Intelygenz.",
+    "subtitle": "Me especializo en construir apps con <bold>Next.js</bold>, <bold>React</bold> y <bold>React Native</bold> para crear experiencias de usuario fluidas.",
+    "viewProject": "Ver proyecto",
+    "aboutTitle": "Sobre Mí",
+    "aboutP1": "Soy un desarrollador frontend autodidacta basado en España, apasionado por construir aplicaciones web intuitivas y de alto rendimiento. Me especializo en el ecosistema React, trabajando diariamente con Next.js, TypeScript y herramientas modernas de CSS como Tailwind.",
+    "aboutP2": "Con experiencia en fintech, real estate y empresas de tecnología, aporto un enfoque versátil al desarrollo frontend. Me importa profundamente el código limpio, la arquitectura de componentes y ofrecer grandes experiencias de usuario.",
+    "aboutP3": "Cuando no estoy programando, puedes encontrarme explorando nuevas tecnologías, contribuyendo a código abierto, o disfrutando de un buen café.",
+    "contactTitle": "Trabajemos juntos",
+    "contactSubtitle": "Siempre estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!",
+    "contactEmail": "Envíame un email",
+    "contactOr": "o encuéntrame en"
+  },
+  "project": {
+    "stack": "Stack",
+    "code": "Código",
+    "live": "Live",
+    "viewCode": "Ver Código",
+    "viewSite": "Ver Sitio",
+    "purpose": "Propósito del Proyecto",
+    "stackExplanation": "Explicación del Stack",
+    "challenges": "Desafíos",
+    "lessonsLearned": "Lecciones Aprendidas",
+    "comingSoon": "Muy pronto"
+  },
+  "cv": {
+    "socialMedia": "Redes Sociales",
+    "workExperience": "Experiencia Laboral",
+    "skills": "Habilidades",
+    "education": "Educación",
+    "languages": "Idiomas"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "goHome": "Ir al Inicio"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "projects": {
+    "batatabit": {
+      "shortDescription": "Landing page para una plataforma de criptomonedas con información de mercado en tiempo real, diseñada con enfoque mobile-first y animaciones CSS.",
+      "description": "Batatabit es una landing page para un servicio de criptomonedas que muestra tendencias del mercado, planes de suscripción y una API para consultas en tiempo real. El proyecto fue desarrollado con enfoque mobile-first, asegurando una experiencia fluida en todos los dispositivos.",
+      "purpose": "Practicar la metodología mobile-first y crear una landing page profesional con múltiples secciones, tablas de precios y un diseño atractivo que priorice la experiencia en dispositivos móviles.",
+      "stackExplanation": "HTML semántico para la estructura, CSS con media queries para el diseño responsive mobile-first, y JavaScript vanilla para las interacciones del usuario y animaciones al hacer scroll.",
+      "challenges": "El mayor reto fue lograr que las tablas de precios y las secciones de datos se vieran bien tanto en móvil como en desktop, manteniendo la legibilidad y la jerarquía visual sin usar frameworks CSS.",
+      "lessonsLearned": "Aprendí la importancia de diseñar primero para móvil y escalar hacia arriba. También mejoré mi comprensión de las media queries y cómo estructurar CSS de forma mantenible."
+    },
+    "crowdfund": {
+      "shortDescription": "Página de crowdfunding interactiva con sistema de pledges, modal de selección y barra de progreso dinámica. Construida con HTML, CSS y JavaScript vanilla.",
+      "description": "Crowdfund es una landing page interactiva de crowdfunding que simula un producto real con sistema de pledges, modal de selección de recompensas, barra de progreso dinámica y gestión de estado del inventario. El proyecto incluye interacciones complejas de UI.",
+      "purpose": "Desarrollar una aplicación interactiva con gestión de estado compleja usando solo JavaScript vanilla, incluyendo modales, validación de formularios y actualización dinámica de la UI.",
+      "stackExplanation": "HTML para la estructura semántica, CSS custom properties para temas consistentes y JavaScript vanilla para toda la lógica de negocio: gestión de pledges, control de inventario y actualizaciones del DOM.",
+      "challenges": "Implementar la gestión de estado sin frameworks fue el reto principal. El modal necesitaba sincronizar datos entre el pledge seleccionado, el inventario disponible y la barra de progreso en tiempo real.",
+      "lessonsLearned": "Comprendí mejor los patrones de gestión de estado en JavaScript vanilla y la importancia de separar la lógica de negocio de la manipulación del DOM. Esto me preparó para entender mejor frameworks como React."
+    },
+    "loopstudio": {
+      "shortDescription": "Landing page para un estudio de realidad virtual con navegación responsive, grid de proyectos y animaciones. Diseño moderno con CSS Grid y Flexbox.",
+      "description": "Loopstudio es una landing page para un estudio de experiencias de realidad virtual inmersivas. Incluye navegación responsive con menú hamburguesa, hero section con imagen de fondo, grid de proyectos con efecto hover y footer completo. Diseño basado en un challenge de Frontend Mentor.",
+      "purpose": "Dominar CSS Grid para layouts complejos de galería y practicar la implementación de navegación responsive con menú móvil animado.",
+      "stackExplanation": "HTML5 semántico, CSS Grid para la galería de proyectos, Flexbox para alineaciones, y JavaScript para el menú hamburguesa y las animaciones de scroll.",
+      "challenges": "Lograr que el grid de proyectos se adapte correctamente entre mobile (1 columna) y desktop (4 columnas) manteniendo las proporciones de las imágenes y los overlays de texto fue el mayor desafío.",
+      "lessonsLearned": "CSS Grid es extremadamente potente para layouts de galería. Aprendí a combinar Grid con object-fit y position para crear cards con overlays de texto elegantes."
+    },
+    "sunnyside": {
+      "shortDescription": "Landing page para una agencia creativa con secciones de servicio, testimonios de clientes y galería de imágenes. Diseño colorido y moderno.",
+      "description": "Sunnyside Agency es una landing page para una agencia creativa que presenta sus servicios a través de secciones visuales impactantes, testimonios de clientes y una galería de imágenes. El proyecto destaca por su uso del color y la composición visual. Challenge de Frontend Mentor.",
+      "purpose": "Crear una landing page visualmente rica con múltiples secciones de contenido, practicando la maquetación de diseños complejos con imágenes y texto superpuesto.",
+      "stackExplanation": "HTML semántico para accesibilidad, CSS con técnicas avanzadas de posicionamiento para superponer texto sobre imágenes, y JavaScript para la navegación móvil y las interacciones.",
+      "challenges": "El diseño requería superponer texto sobre imágenes de fondo de manera que fuera legible en todos los tamaños de pantalla. Las secciones alternas de imagen-texto necesitaban cambiar de disposición entre mobile y desktop.",
+      "lessonsLearned": "Mejoré mi capacidad para maquetar diseños complejos con múltiples breakpoints. También aprendí técnicas para mantener la legibilidad del texto sobre imágenes de fondo variables."
+    },
+    "portfolio": {
+      "shortDescription": "¡Este mismo portfolio! Construido con React 18, TypeScript, Vite, Tailwind CSS y Framer Motion. Incluye modo oscuro, i18n y transiciones de página.",
+      "description": "Mi portfolio personal construido con tecnologías frontend modernas. Incluye soporte bilingüe (ES/EN), modo oscuro, transiciones de página con Framer Motion, diseño responsive, optimización SEO y una arquitectura de componentes limpia.",
+      "purpose": "Crear un portfolio profesional para mostrar mi trabajo y habilidades, demostrando competencia con tecnologías frontend modernas como React, TypeScript y Tailwind CSS.",
+      "stackExplanation": "React 18 con TypeScript para seguridad de tipos, Vite para builds rápidos, Tailwind CSS para estilos utility-first, Framer Motion para animaciones suaves, react-i18next para internacionalización, y react-helmet-async para SEO.",
+      "challenges": "Implementar soporte bilingüe en todo el sitio manteniendo una organización limpia del código fue el mayor desafío. También, diseñar un portfolio que muestre efectivamente habilidades frontend sin depender de servicios backend complejos.",
+      "lessonsLearned": "Aprendí a estructurar una aplicación React para escalabilidad, implementar i18n desde cero, y crear un sistema de diseño cohesivo con Tailwind CSS."
+    }
+  }
+}
