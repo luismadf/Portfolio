@@ -39,7 +39,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           </div>
         )}
         <button
-          className={`group/project-button relative uppercase after:content-[' '] after:absolute after:-bottom-[4px] after:-left-[2px] after:h-[3px] after:w-[86%] after:md:hover:w-[86%] peer-hover/image:after:w-[86%] peer-hover/project-title:after:w-[86%] after:md:duration-500 after:md:w-[0%] md:cursor-pointer md:duration-500 after:rounded-md ${buttonColor}`}
+          className={`group/project-button relative uppercase after:content-[' '] after:absolute after:-bottom-[4px] after:-left-[2px] after:h-[3px] after:w-[86%] md:hover:after:w-[86%] peer-hover/image:after:w-[86%] peer-hover/project-title:after:w-[86%] md:after:duration-500 md:after:w-[0%] md:cursor-pointer md:duration-500 after:rounded-md ${buttonColor}`}
           type='button'
           onClick={() => handleClick(id)}
         >

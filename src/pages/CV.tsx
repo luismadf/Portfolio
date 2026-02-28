@@ -30,7 +30,7 @@ const CV = () => {
         <SEO title={`CV - ${name} ${lastName}`} description={description} />
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-slate-800 dark:to-slate-900 py-12 transition-colors duration-300">
+        <div className="bg-linear-to-r from-blue-100 to-indigo-100 dark:from-slate-800 dark:to-slate-900 py-12 transition-colors duration-300">
           <div className="container mx-auto">
             <div className="mb-6">
               <h2 className="uppercase font-bold text-xl mb-1">{name}</h2>

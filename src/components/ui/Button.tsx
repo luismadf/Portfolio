@@ -30,14 +30,14 @@ const Button = forwardRef<HTMLButtonElement, Props>(({
     'inline-flex items-center justify-center',
     'transition-[transform,box-shadow,background-color,color] duration-200',
     'motion-reduce:transition-none',
-    'focus-visible:outline-none',
+    'focus-visible:outline-hidden',
     'focus-visible:ring-4 focus-visible:ring-primary/50 dark:focus-visible:ring-primary/70',
     'active:scale-95',
   ].join(' ')
 
   const variants = {
     solid: [
-      'bg-gradient-to-br from-primary to-blue-500',
+      'bg-linear-to-br from-primary to-blue-500',
       'hover:from-blue-600 hover:to-primary',
       'text-white rounded-md',
       'shadow-md hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary/20',
@@ -48,7 +48,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(({
       'hover:bg-slate-200 dark:hover:bg-slate-700',
       'hover:text-primary dark:hover:text-primary',
       'rounded-full',
-      '[touch-action:manipulation]',
+      'touch-manipulation',
     ].join(' '),
     unstyled: '',
   }
