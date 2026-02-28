@@ -30,7 +30,7 @@ const Home = () => {
             <img
               src='/images/circle-luis.png'
               alt='Luis de Freites'
-              className='w-32 h-32 rounded-full mx-auto md:mx-0 flex-shrink-0'
+              className='w-32 h-32 rounded-full mx-auto md:mx-0 shrink-0'
             />
             <div className='space-y-4 text-slate-600 dark:text-slate-300'>
               <p>{t('home.aboutP1')}</p>
@@ -49,7 +49,7 @@ const Home = () => {
       </section>
 
       {/* Contact */}
-      <section className='bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 py-20 transition-colors duration-300'>
+      <section className='bg-linear-to-r from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 py-20 transition-colors duration-300'>
         <div className='container mx-auto text-center'>
           <h2 className='text-2xl font-bold mb-4'>{t('home.contactTitle')}</h2>
           <p className='text-slate-500 dark:text-slate-400 mb-8 max-w-md mx-auto'>
