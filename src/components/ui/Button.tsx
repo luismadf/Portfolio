@@ -11,18 +11,45 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'md' | 'lg' | 'icon'
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ 
-  children, 
+// Icon buttons must have an aria-label for accessibility
+export interface IconButtonProps extends ButtonProps {
+  variant: 'icon'
+  'aria-label': string
+}
+
+type Props = IconButtonProps | ButtonProps
+
+const Button = forwardRef<HTMLButtonElement, Props>(({
+  children,
   variant = 'solid',
   size = 'md',
   className,
-  ...props 
+  ...props
 }, ref) => {
-  const baseStyles = 'inline-flex items-center justify-center transition-colors duration-500 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800'
-  
+  const baseStyles = [
+    'inline-flex items-center justify-center',
+    'transition-[transform,box-shadow,background-color,color] duration-200',
+    'motion-reduce:transition-none',
+    'focus-visible:outline-none',
+    'focus-visible:ring-4 focus-visible:ring-primary/50 dark:focus-visible:ring-primary/70',
+    'active:scale-95',
+  ].join(' ')
+
   const variants = {
-    solid: 'bg-[#3B82F6] hover:bg-[#2A5CAF] text-white rounded-md',
-    icon: 'bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 rounded-full',
+    solid: [
+      'bg-gradient-to-br from-primary to-blue-500',
+      'hover:from-blue-600 hover:to-primary',
+      'text-white rounded-md',
+      'shadow-md hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-primary/20',
+    ].join(' '),
+    icon: [
+      'bg-slate-100 dark:bg-slate-800',
+      'text-slate-500 dark:text-slate-400',
+      'hover:bg-slate-200 dark:hover:bg-slate-700',
+      'hover:text-primary dark:hover:text-primary',
+      'rounded-full',
+      '[touch-action:manipulation]',
+    ].join(' '),
     unstyled: '',
   }
 
@@ -30,10 +57,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-5 py-2.5 text-base',
     lg: 'px-8 py-3 text-lg',
-    icon: 'w-10 h-10',
+    // 44px — meets minimum touch target size (WCAG 2.5.5)
+    icon: 'w-11 h-11',
   }
 
-  // If variant is icon, force icon size
   const activeSize = variant === 'icon' ? 'icon' : size
 
   const buttonClass = cn(
