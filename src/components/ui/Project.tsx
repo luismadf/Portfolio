@@ -1,38 +1,49 @@
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { Project as ProjectType } from 'types'
 
 interface ProjectProps {
-  project: any
+  project: ProjectType
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  const { id, name, images, info, buttonColor } = project
+  const { id, name, images, buttonColor, stack, translationKey } = project
+  const { t } = useTranslation()
 
-  let navigate = useNavigate()
-
-  const handleClick = (id: any) => navigate(`/project/${id}`)
+  const navigate = useNavigate()
+  const handleClick = (id: number) => navigate(`/project/${id}`)
 
   return (
     <div className='project w-full md:flex md:items-center md:gap-24'>
       <img
         className='peer/image w-full h-[250px] mb-6 object-cover object-top rounded-md md:h-[300px] md:cursor-pointer md:duration-500 md:hover:hover:shadow-xl md:hover:scale-105 md:max-w-[480px]'
         src={images?.show || '/images/Cover.png'}
-        alt='Project Cover'
+        alt={`${name} project screenshot`}
         onClick={() => handleClick(id)}
       />
       <div>
         <h3 className='peer/project-title mb-6 cursor-pointer' onClick={() => handleClick(id)}>
-          {name || 'Project Name'}
+          {name}
         </h3>
-        <p className='mb-6'>
-          {info.shortDescription ||
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristiqfacilisis fringilla.'}
-        </p>
+        <p className='mb-4'>{t(`projects.${translationKey}.shortDescription`)}</p>
+        {stack && (
+          <div className='flex flex-wrap gap-2 mb-6'>
+            {stack.map((tech) => (
+              <span
+                key={tech}
+                className='px-3 py-1 text-xs font-medium uppercase rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300'
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
         <button
           className={`group/project-button relative uppercase after:content-[' '] after:absolute after:-bottom-[4px] after:-left-[2px] after:h-[3px] after:w-[86%] after:md:hover:w-[86%] peer-hover/image:after:w-[86%] peer-hover/project-title:after:w-[86%] after:md:duration-500 after:md:w-[0%] md:cursor-pointer md:duration-500 after:rounded-md ${buttonColor}`}
           type='button'
           onClick={() => handleClick(id)}
         >
-          Ver proyecto
+          {t('home.viewProject')}
           <i className='fas fa-arrow-right ml-2 group-hover/project-button:ml-3 md:duration-500' />
         </button>
       </div>

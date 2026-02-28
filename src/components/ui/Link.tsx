@@ -1,9 +1,10 @@
+import { ReactNode } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 
 interface LinkProps {
-  children: any
+  children: ReactNode
   to: string
-  target: string
+  target?: string
 }
 
 const Link: React.FC<LinkProps> = ({ children, to, ...props }) => {

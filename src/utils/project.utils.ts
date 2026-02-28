@@ -1,12 +1,13 @@
-export const projectList = [
+import { Project, CVInfo } from 'types'
+
+export const projectList: Project[] = [
   {
     id: 1,
     name: "Batatabit",
+    translationKey: "batatabit",
     info: {
-      shortDescription:
-        "Batatabit es un servicio que te ayuda a cumplir tus sueños a traves de la criptomonedas, si, como lo leiste, compra y vende con nosotros, no hay tasas escondidas.",
-      description:
-        "Batatabit es un servicio que te ayuda a cumplir tus sueños a traves de la criptomonedas, si, como lo leiste, compra y vende con nosotros, no hay tasas escondidas, te mostramos las tendencias del mercado para que estes preparados y ademas con nuestra API puedes obtener información y realizar tu ¡AL INSTANTE!",
+      shortDescription: "",
+      description: "",
     },
     images: {
       show: "/images/projects/batatabit/show.png",
@@ -21,11 +22,10 @@ export const projectList = [
   {
     id: 2,
     name: "Crowdfund",
+    translationKey: "crowdfund",
     info: {
-      shortDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+      shortDescription: "",
+      description: "",
     },
     images: {
       show: "/images/projects/crowdfund/show.png",
@@ -40,11 +40,10 @@ export const projectList = [
   {
     id: 3,
     name: "Loopstudio",
+    translationKey: "loopstudio",
     info: {
-      shortDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+      shortDescription: "",
+      description: "",
     },
     images: {
       show: "/images/projects/loopstudio/show.png",
@@ -59,11 +58,10 @@ export const projectList = [
   {
     id: 4,
     name: "Sunnyside Agency",
+    translationKey: "sunnyside",
     info: {
-      shortDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fringilla purus. Cras at elit urna. Quisque quis neque iaculis, aliquam magna in, volutpat mi. Nullam commodo nisi turpis, quis venenatis orci malesuada non. Aliquam felis justo, suscipit et mauris non, tempus placerat nulla. Aliquam erat volutpat. Aliquam velit ante, iaculis eu dignissim ut, luctus blandit enim. Vestibulum id aliquam lectus, convallis vehicula massa. Sed tempor auctor massa, sed porttitor massa euismod quis. Nulla vestibulum metus turpis. Ut lacinia eleifend lacus. Sed malesuada sed urna id efficitur.",
+      shortDescription: "",
+      description: "",
     },
     images: {
       show: "/images/projects/sunnyside/show.png",
@@ -75,55 +73,50 @@ export const projectList = [
     code: "https://github.com/luismadf/SunnysideAgency",
     live: "https://sunnysideagencyproject.netlify.app/",
   },
-  /*   {
-    name: "Luis Exchange",
-    image: Luisexchange,
-    laptopImage: LuisexchangeLaptop,
-    live: "https://luisexchange.netlify.app/",
-    github: "https://github.com/luismadf/luis-exchange",
-  },
   {
-    name: "Bienes Raices",
-    image: Bienesraices,
-    laptopImage: BienesraicesLaptop,
-    live: "https://frosty-swartz-1757ff.netlify.app/",
-    github: "https://luismadf.github.io/Loopstudio/",
+    id: 5,
+    name: "Portfolio",
+    translationKey: "portfolio",
+    info: {
+      shortDescription: "",
+      description: "",
+    },
+    images: {
+      show: "/images/og-image.svg",
+      desktop: "/images/og-image.svg",
+      mobile: "/images/og-image.svg",
+    },
+    buttonColor: "after:bg-[#93C5FD]",
+    stack: ["react", "typescript", "vite", "tailwind css", "framer motion", "i18n"],
+    code: "https://github.com/luismadf/Portfolio",
+    live: "https://luisma.dev",
   },
-  {
-    name: "MERNTask",
-    image: MERNTask,
-    laptopImage: MERNTaskLaptop,
-    live: "https://jolly-bell-a52ce9.netlify.app/",
-    github: "https://luismadf.github.io/Loopstudio/",
-  },
-  {
-    name: "Digital Product",
-    image: Digitalproduct,
-    laptopImage: DigitalproductLaptop,
-    github: "https://github.com/luismadf/Digital_product_react",
-    live: "https://digitalproductreact.netlify.app/",
-  }, */
 ];
 
-export const getProjectById = (id: any) => {
-  return projectList.filter((project) => project.id === parseInt(id));
-};
+export const getProjectById = (id: string | undefined): Project | undefined => {
+  if (!id) return undefined
+  return projectList.find((project) => project.id === parseInt(id))
+}
 
-export const cvInfo = {
+export const cvInfo: CVInfo = {
   name: "Luis",
   lastName: "De Freites",
   position: "Front-end Developer",
   image: "/images/cv-profile.png",
   description:
-    "I’m a self-taught front-end developer, focused on the Marketing Automation domain. I primarily work with React and NextJs, but I’m equally capable in Vanilla javascript and Node. My experience includes coding/crafting Landing Pages and Emails, automation of Marketing Campaigns and segmentation, UI & UX, as well as integration with 3rd-party services and system like Hubspot and Wordpress. I'm agile on process optimization, and diligently work to improve our internal processes and reduce time-to-market for our tools and services. I’m an easy-going developer, naturally able to slide into any team and bring value from day 1.",
+    "I'm a self-taught front-end developer, focused on the Marketing Automation domain. I primarily work with React and NextJs, but I'm equally capable in Vanilla javascript and Node. My experience includes coding/crafting Landing Pages and Emails, automation of Marketing Campaigns and segmentation, UI & UX, as well as integration with 3rd-party services and system like Hubspot and Wordpress. I'm agile on process optimization, and diligently work to improve our internal processes and reduce time-to-market for our tools and services. I'm an easy-going developer, naturally able to slide into any team and bring value from day 1.",
   social: [
     {
-      name: "linkedin",
+      name: "LinkedIn",
       url: "https://www.linkedin.com/in/luis-de-freites-6a5888181/",
     },
     {
-      name: "email",
+      name: "Email",
       url: "mailto:luisdefreites120@gmail.com",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/luismadf",
     },
   ],
   experience: [
@@ -131,34 +124,54 @@ export const cvInfo = {
       companyName: "Intelygenz",
       position: "Front-end Developer",
       time: "oct 2022 - now",
+      description: "Building web applications with React, Next.js, and TypeScript. Working with agile methodologies and CI/CD pipelines.",
     },
     {
       companyName: "MyInvestor",
       position: "Front-end Developer",
       time: "jun 2021 - oct 2022",
+      description: "Developed and maintained fintech applications. Implemented responsive UI components and integrated with REST APIs.",
     },
     {
       companyName: "Rentchester",
       position: "Front-end Developer",
       time: "abr 2021 - jun 2021",
+      description: "Built real estate platform features using React. Worked on property listing and search functionality.",
     },
   ],
   skills: [
-    "Component Architecture",
-    "React, Next, Redux, React Native",
-    "Node and Express",
-    "Javascript / Typescript",
-    "REST API Consumption",
-    "Advanced CSS (Flexbox, Grid) and SASS",
-    "Bootstrap, MaterialUI, Next UI, Storybook",
-    "Marketing Automation",
-    "Version Control through GIT, GitFlow",
+    {
+      category: "Frontend",
+      items: ["React", "Next.js", "React Native", "TypeScript", "JavaScript"],
+    },
+    {
+      category: "Styling",
+      items: ["Tailwind CSS", "SASS", "CSS Grid", "Flexbox", "Material UI", "Storybook"],
+    },
+    {
+      category: "State & Data",
+      items: ["Redux", "REST APIs", "Node.js", "Express"],
+    },
+    {
+      category: "Tools",
+      items: ["Git", "GitFlow", "Vite", "Webpack", "Figma"],
+    },
+    {
+      category: "Other",
+      items: ["Component Architecture", "Marketing Automation", "Agile/Scrum"],
+    },
   ],
   education: [
     {
-      title: "title",
-      description: "description",
+      title: "Self-taught Developer",
+      description: "Continuous learning through online platforms, documentation, and hands-on projects. Focused on modern frontend technologies and best practices.",
+      year: "2020 - Present",
+    },
+    {
+      title: "Frontend Development",
+      description: "Comprehensive study of HTML, CSS, JavaScript, React ecosystem, and web development fundamentals.",
+      year: "2020",
     },
   ],
-  languages: ["English - CI", "Spanish - Native"],
+  languages: ["English - C1", "Spanish - Native"],
 };
